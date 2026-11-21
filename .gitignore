@@ -1,0 +1,80 @@
+# Smoothieware LPC1769 CNC Firmware Project - Gitignore
+
+# Build output directories
+build/
+OBJ/
+*.elf
+*.hex
+*.bin
+
+# Generated linker scripts (if customized)
+LPC1769.ld
+
+# Mbed build artifacts
+mbed/drop/
+mbed/build/
+
+# Firmware binaries (pre-compiled, not source)
+FirmwareBin/
+
+# IDE and editor temporary files
+*~
+*.swp
+*.swo
+*.log
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# CubeIDE / STM32 projects (if ever ported)
+.debug/
+Release/
+Debug/
+*.o
+*.d
+
+# Local configuration overrides (user-specific)
+smoothie_overrides.txt
+
+# Generated version strings (if not tracked)
+src/version.cpp
+src/version.h
+
+# Packet destructor
+*.bc
+*.elf
+*.map
+
+# DFU and upload artifacts
+*.lastupload.elf
+
+# Backup files
+*~
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Configuration files that should be user-customized
+configuration.txt
+
+# Mbed OS default ignores
+# (mbed will add its own, but these are good defaults)
+
+# Compiler generated files
+# Object files
+*.o
+*.d
+
+# Assembler listings
+*.lst
+
+# Preprocessor output
+*.i
+
+# Linker control scripts
+*.lds
+
+# Any other generated build artifacts
+.buildird/

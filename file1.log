@@ -1,0 +1,306 @@
+make: se entra en el directorio '/mnt/disk/src/desktop_src/CNC/Smoothieware/mbed'
+Building src
+make[1]: se entra en el directorio '/mnt/disk/src/desktop_src/CNC/Smoothieware/mbed/src'
+Deploying cpp/AnalogIn.h to drop
+Deploying cpp/AnalogOut.h to drop
+Deploying cpp/BusIn.h to drop
+Deploying cpp/BusInOut.h to drop
+Deploying cpp/BusOut.h to drop
+Deploying cpp/CAN.h to drop
+Deploying cpp/DigitalIn.h to drop
+Deploying cpp/DigitalInOut.h to drop
+Deploying cpp/DigitalOut.h to drop
+Deploying cpp/DirHandle.h to drop
+Deploying cpp/Ethernet.h to drop
+Deploying cpp/FileBase.h to drop
+Deploying cpp/FileHandle.h to drop
+Deploying cpp/FileLike.h to drop
+Deploying cpp/FilePath.h to drop
+Deploying cpp/FileSystemLike.h to drop
+Deploying cpp/FunctionPointer.h to drop
+Deploying cpp/I2C.h to drop
+Deploying cpp/I2CSlave.h to drop
+Deploying cpp/InterruptIn.h to drop
+Deploying cpp/LocalFileSystem.h to drop
+Deploying cpp/mbed.h to drop
+Deploying cpp/platform.h to drop
+Deploying cpp/PortIn.h to drop
+Deploying cpp/PortInOut.h to drop
+Deploying cpp/PortOut.h to drop
+Deploying cpp/PwmOut.h to drop
+Deploying cpp/Serial.h to drop
+Deploying cpp/SPI.h to drop
+Deploying cpp/SPISlave.h to drop
+Deploying cpp/Stream.h to drop
+Deploying cpp/Ticker.h to drop
+Deploying cpp/Timeout.h to drop
+Deploying cpp/TimerEvent.h to drop
+Deploying cpp/Timer.h to drop
+Deploying capi/analogin_api.h to drop
+Deploying capi/analogout_api.h to drop
+Deploying capi/can_api.h to drop
+Deploying capi/can_helper.h to drop
+Deploying capi/error.h to drop
+Deploying capi/ethernet_api.h to drop
+Deploying capi/gpio_api.h to drop
+Deploying capi/gpio_irq_api.h to drop
+Deploying capi/i2c_api.h to drop
+Deploying capi/mbed_debug.h to drop
+Deploying capi/mbed_interface.h to drop
+Deploying capi/pinmap.h to drop
+Deploying capi/port_api.h to drop
+Deploying capi/pwmout_api.h to drop
+Deploying capi/rtc_api.h to drop
+Deploying capi/rtc_time.h to drop
+Deploying capi/semihost_api.h to drop
+Deploying capi/serial_api.h to drop
+Deploying capi/sleep_api.h to drop
+Deploying capi/spi_api.h to drop
+Deploying capi/toolchain.h to drop
+Deploying capi/us_ticker_api.h to drop
+Deploying capi/wait_api.h to drop
+Building mbed-lpc1768.mk
+make[2]: se entra en el directorio '/mnt/disk/src/desktop_src/CNC/Smoothieware/mbed/src'
+Compiling vendor/NXP/capi/analogin_api.c
+Compiling vendor/NXP/capi/analogout_api.c
+Compiling vendor/NXP/capi/board.c
+Compiling vendor/NXP/capi/can_api.c
+Compiling vendor/NXP/capi/ethernet_api.c
+Compiling vendor/NXP/capi/gpio_api.c
+Compiling vendor/NXP/capi/gpio_irq_api.c
+Compiling vendor/NXP/capi/i2c_api.c
+Compiling vendor/NXP/capi/pinmap.c
+Compiling vendor/NXP/capi/PinNames.c
+Compiling vendor/NXP/capi/port_api.c
+Compiling vendor/NXP/capi/pwmout_api.c
+Compiling vendor/NXP/capi/rtc_api.c
+Compiling vendor/NXP/capi/semihost.c
+Compiling vendor/NXP/capi/serial_api.c
+Compiling vendor/NXP/capi/sleep.c
+Compiling vendor/NXP/capi/spi_api.c
+Compiling vendor/NXP/capi/us_ticker_api.c
+Compiling vendor/NXP/cmsis/LPC1768/cmsis_nvic.c
+Compiling vendor/NXP/cmsis/LPC1768/core_cm3.c
+Compiling vendor/NXP/cmsis/LPC1768/system_LPC17xx.c
+Compiling capi/exit.c
+Compiling capi/mbed_interface.c
+Compiling capi/pinmap_common.c
+Compiling capi/rtc_time.c
+Compiling capi/semihost_api.c
+Compiling capi/wait_api.c
+Assembling vendor/NXP/cmsis/LPC1768/GCC_ARM/startup_LPC17xx.s
+Compiling cpp/BusIn.cpp
+Compiling cpp/BusInOut.cpp
+Compiling cpp/BusOut.cpp
+Compiling cpp/CAN.cpp
+Compiling cpp/Ethernet.cpp
+Compiling cpp/FileBase.cpp
+Compiling cpp/FileLike.cpp
+Compiling cpp/FilePath.cpp
+Compiling cpp/FileSystemLike.cpp
+Compiling cpp/FunctionPointer.cpp
+Compiling cpp/I2C.cpp
+Compiling cpp/I2CSlave.cpp
+Compiling cpp/InterruptIn.cpp
+Compiling cpp/LocalFileSystem.cpp
+Compiling cpp/Serial.cpp
+Compiling cpp/SPI.cpp
+Compiling cpp/SPISlave.cpp
+Compiling cpp/stdio.cpp
+Compiling cpp/Stream.cpp
+Compiling cpp/Ticker.cpp
+Compiling cpp/Timeout.cpp
+Compiling cpp/Timer.cpp
+Compiling cpp/TimerEvent.cpp
+Linking release library ../drop/LPC1768/GCC_ARM/libmbed.a
+Compiling vendor/NXP/capi/analogin_api.c
+Compiling vendor/NXP/capi/analogout_api.c
+Compiling vendor/NXP/capi/board.c
+Compiling vendor/NXP/capi/can_api.c
+Compiling vendor/NXP/capi/ethernet_api.c
+Compiling vendor/NXP/capi/gpio_api.c
+Compiling vendor/NXP/capi/gpio_irq_api.c
+Compiling vendor/NXP/capi/i2c_api.c
+Compiling vendor/NXP/capi/pinmap.c
+Compiling vendor/NXP/capi/PinNames.c
+Compiling vendor/NXP/capi/port_api.c
+Compiling vendor/NXP/capi/pwmout_api.c
+Compiling vendor/NXP/capi/rtc_api.c
+Compiling vendor/NXP/capi/semihost.c
+Compiling vendor/NXP/capi/serial_api.c
+Compiling vendor/NXP/capi/sleep.c
+Compiling vendor/NXP/capi/spi_api.c
+Compiling vendor/NXP/capi/us_ticker_api.c
+Compiling vendor/NXP/cmsis/LPC1768/cmsis_nvic.c
+Compiling vendor/NXP/cmsis/LPC1768/core_cm3.c
+Compiling vendor/NXP/cmsis/LPC1768/system_LPC17xx.c
+Compiling capi/exit.c
+Compiling capi/mbed_interface.c
+Compiling capi/pinmap_common.c
+Compiling capi/rtc_time.c
+Compiling capi/semihost_api.c
+Compiling capi/wait_api.c
+Assembling vendor/NXP/cmsis/LPC1768/GCC_ARM/startup_LPC17xx.s
+Compiling cpp/BusIn.cpp
+Compiling cpp/BusInOut.cpp
+Compiling cpp/BusOut.cpp
+Compiling cpp/CAN.cpp
+Compiling cpp/Ethernet.cpp
+Compiling cpp/FileBase.cpp
+Compiling cpp/FileLike.cpp
+Compiling cpp/FilePath.cpp
+Compiling cpp/FileSystemLike.cpp
+Compiling cpp/FunctionPointer.cpp
+Compiling cpp/I2C.cpp
+Compiling cpp/I2CSlave.cpp
+Compiling cpp/InterruptIn.cpp
+Compiling cpp/LocalFileSystem.cpp
+Compiling cpp/Serial.cpp
+Compiling cpp/SPI.cpp
+Compiling cpp/SPISlave.cpp
+Compiling cpp/stdio.cpp
+Compiling cpp/Stream.cpp
+Compiling cpp/Ticker.cpp
+Compiling cpp/Timeout.cpp
+Compiling cpp/Timer.cpp
+Compiling cpp/TimerEvent.cpp
+Linking debug library ../drop/LPC1768/GCC_ARM/Debug/libmbed.a
+Deploying vendor/NXP/capi/LPC1768/device.h to drop
+Deploying vendor/NXP/capi/LPC1768/gpio_object.h to drop
+Deploying vendor/NXP/capi/LPC1768/objects.h to drop
+Deploying vendor/NXP/capi/LPC1768/PeripheralNames.h to drop
+Deploying vendor/NXP/capi/LPC1768/PinNames.h to drop
+Deploying vendor/NXP/capi/LPC1768/PortNames.h to drop
+Deploying vendor/NXP/cmsis/LPC1768/cmsis.h to drop
+Deploying vendor/NXP/cmsis/LPC1768/cmsis_nvic.h to drop
+Deploying vendor/NXP/cmsis/LPC1768/core_cm3.h to drop
+Deploying vendor/NXP/cmsis/LPC1768/core_cmFunc.h to drop
+Deploying vendor/NXP/cmsis/LPC1768/core_cmInstr.h to drop
+Deploying vendor/NXP/cmsis/LPC1768/LPC17xx.h to drop
+Deploying vendor/NXP/cmsis/LPC1768/system_LPC17xx.h to drop
+Exporting linker script to ../drop/LPC1768/GCC_ARM/LPC1768.ld
+make[2]: se sale del directorio '/mnt/disk/src/desktop_src/CNC/Smoothieware/mbed/src'
+Building mbed-lpc11u24.mk
+make[2]: se entra en el directorio '/mnt/disk/src/desktop_src/CNC/Smoothieware/mbed/src'
+Compiling vendor/NXP/capi/analogin_api.c
+Compiling vendor/NXP/capi/analogout_api.c
+Compiling vendor/NXP/capi/board.c
+Compiling vendor/NXP/capi/can_api.c
+Compiling vendor/NXP/capi/ethernet_api.c
+Compiling vendor/NXP/capi/gpio_api.c
+Compiling vendor/NXP/capi/gpio_irq_api.c
+Compiling vendor/NXP/capi/i2c_api.c
+Compiling vendor/NXP/capi/pinmap.c
+Compiling vendor/NXP/capi/PinNames.c
+Compiling vendor/NXP/capi/port_api.c
+Compiling vendor/NXP/capi/pwmout_api.c
+Compiling vendor/NXP/capi/rtc_api.c
+Compiling vendor/NXP/capi/semihost.c
+Compiling vendor/NXP/capi/serial_api.c
+Compiling vendor/NXP/capi/sleep.c
+Compiling vendor/NXP/capi/spi_api.c
+Compiling vendor/NXP/capi/us_ticker_api.c
+Compiling vendor/NXP/cmsis/LPC11U24/cmsis_nvic.c
+Compiling vendor/NXP/cmsis/LPC11U24/core_cm0.c
+Compiling vendor/NXP/cmsis/LPC11U24/system_LPC11Uxx.c
+Compiling capi/exit.c
+Compiling capi/mbed_interface.c
+Compiling capi/pinmap_common.c
+Compiling capi/rtc_time.c
+Compiling capi/semihost_api.c
+Compiling capi/wait_api.c
+Assembling vendor/NXP/cmsis/LPC11U24/GCC_ARM/startup_LPC11xx.s
+Compiling cpp/BusIn.cpp
+Compiling cpp/BusInOut.cpp
+Compiling cpp/BusOut.cpp
+Compiling cpp/CAN.cpp
+Compiling cpp/Ethernet.cpp
+Compiling cpp/FileBase.cpp
+Compiling cpp/FileLike.cpp
+Compiling cpp/FilePath.cpp
+Compiling cpp/FileSystemLike.cpp
+Compiling cpp/FunctionPointer.cpp
+Compiling cpp/I2C.cpp
+Compiling cpp/I2CSlave.cpp
+Compiling cpp/InterruptIn.cpp
+Compiling cpp/LocalFileSystem.cpp
+Compiling cpp/Serial.cpp
+Compiling cpp/SPI.cpp
+Compiling cpp/SPISlave.cpp
+Compiling cpp/stdio.cpp
+Compiling cpp/Stream.cpp
+Compiling cpp/Ticker.cpp
+Compiling cpp/Timeout.cpp
+Compiling cpp/Timer.cpp
+Compiling cpp/TimerEvent.cpp
+Linking release library ../drop/LPC11U24/GCC_ARM/libmbed.a
+Compiling vendor/NXP/capi/analogin_api.c
+Compiling vendor/NXP/capi/analogout_api.c
+Compiling vendor/NXP/capi/board.c
+Compiling vendor/NXP/capi/can_api.c
+Compiling vendor/NXP/capi/ethernet_api.c
+Compiling vendor/NXP/capi/gpio_api.c
+Compiling vendor/NXP/capi/gpio_irq_api.c
+Compiling vendor/NXP/capi/i2c_api.c
+Compiling vendor/NXP/capi/pinmap.c
+Compiling vendor/NXP/capi/PinNames.c
+Compiling vendor/NXP/capi/port_api.c
+Compiling vendor/NXP/capi/pwmout_api.c
+Compiling vendor/NXP/capi/rtc_api.c
+Compiling vendor/NXP/capi/semihost.c
+Compiling vendor/NXP/capi/serial_api.c
+Compiling vendor/NXP/capi/sleep.c
+Compiling vendor/NXP/capi/spi_api.c
+Compiling vendor/NXP/capi/us_ticker_api.c
+Compiling vendor/NXP/cmsis/LPC11U24/cmsis_nvic.c
+Compiling vendor/NXP/cmsis/LPC11U24/core_cm0.c
+Compiling vendor/NXP/cmsis/LPC11U24/system_LPC11Uxx.c
+Compiling capi/exit.c
+Compiling capi/mbed_interface.c
+Compiling capi/pinmap_common.c
+Compiling capi/rtc_time.c
+Compiling capi/semihost_api.c
+Compiling capi/wait_api.c
+Assembling vendor/NXP/cmsis/LPC11U24/GCC_ARM/startup_LPC11xx.s
+Compiling cpp/BusIn.cpp
+Compiling cpp/BusInOut.cpp
+Compiling cpp/BusOut.cpp
+Compiling cpp/CAN.cpp
+Compiling cpp/Ethernet.cpp
+Compiling cpp/FileBase.cpp
+Compiling cpp/FileLike.cpp
+Compiling cpp/FilePath.cpp
+Compiling cpp/FileSystemLike.cpp
+Compiling cpp/FunctionPointer.cpp
+Compiling cpp/I2C.cpp
+Compiling cpp/I2CSlave.cpp
+Compiling cpp/InterruptIn.cpp
+Compiling cpp/LocalFileSystem.cpp
+Compiling cpp/Serial.cpp
+Compiling cpp/SPI.cpp
+Compiling cpp/SPISlave.cpp
+Compiling cpp/stdio.cpp
+Compiling cpp/Stream.cpp
+Compiling cpp/Ticker.cpp
+Compiling cpp/Timeout.cpp
+Compiling cpp/Timer.cpp
+Compiling cpp/TimerEvent.cpp
+Linking debug library ../drop/LPC11U24/GCC_ARM/Debug/libmbed.a
+Deploying vendor/NXP/capi/LPC11U24/device.h to drop
+Deploying vendor/NXP/capi/LPC11U24/gpio_object.h to drop
+Deploying vendor/NXP/capi/LPC11U24/objects.h to drop
+Deploying vendor/NXP/capi/LPC11U24/PeripheralNames.h to drop
+Deploying vendor/NXP/capi/LPC11U24/PinNames.h to drop
+Deploying vendor/NXP/capi/LPC11U24/PortNames.h to drop
+Deploying vendor/NXP/cmsis/LPC11U24/cmsis.h to drop
+Deploying vendor/NXP/cmsis/LPC11U24/cmsis_nvic.h to drop
+Deploying vendor/NXP/cmsis/LPC11U24/core_cm0.h to drop
+Deploying vendor/NXP/cmsis/LPC11U24/core_cmFunc.h to drop
+Deploying vendor/NXP/cmsis/LPC11U24/core_cmInstr.h to drop
+Deploying vendor/NXP/cmsis/LPC11U24/LPC11Uxx.h to drop
+Deploying vendor/NXP/cmsis/LPC11U24/power_api.h to drop
+Deploying vendor/NXP/cmsis/LPC11U24/system_LPC11Uxx.h to drop
+Exporting linker script to ../drop/LPC11U24/GCC_ARM/LPC11U24.ld
+make[2]: se sale del directorio '/mnt/disk/src/desktop_src/CNC/Smoothieware/mbed/src'
+make[1]: se sale del directorio '/mnt/disk/src/desktop_src/CNC/Smoothieware/mbed/src'
+make: se sale del directorio '/mnt/disk/src/desktop_src/CNC/Smoothieware/mbed'

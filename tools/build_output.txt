@@ -1,0 +1,2 @@
+make: makefile: No existe el archivo o el directorio
+make: *** No hay ninguna regla para construir el objetivo 'makefile'.  Alto.

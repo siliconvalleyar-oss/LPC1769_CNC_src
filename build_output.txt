@@ -1,0 +1,1792 @@
+make[1]: se entra en el directorio '/mnt/disk/src/desktop_src/CNC/Smoothieware/mbed'
+Building src
+make[2]: se entra en el directorio '/mnt/disk/src/desktop_src/CNC/Smoothieware/mbed/src'
+Deploying cpp/AnalogIn.h to drop
+Deploying cpp/AnalogOut.h to drop
+Deploying cpp/BusIn.h to drop
+Deploying cpp/BusInOut.h to drop
+Deploying cpp/BusOut.h to drop
+Deploying cpp/CAN.h to drop
+Deploying cpp/DigitalIn.h to drop
+Deploying cpp/DigitalInOut.h to drop
+Deploying cpp/DigitalOut.h to drop
+Deploying cpp/DirHandle.h to drop
+Deploying cpp/Ethernet.h to drop
+Deploying cpp/FileBase.h to drop
+Deploying cpp/FileHandle.h to drop
+Deploying cpp/FileLike.h to drop
+Deploying cpp/FilePath.h to drop
+Deploying cpp/FileSystemLike.h to drop
+Deploying cpp/FunctionPointer.h to drop
+Deploying cpp/I2C.h to drop
+Deploying cpp/I2CSlave.h to drop
+Deploying cpp/InterruptIn.h to drop
+Deploying cpp/LocalFileSystem.h to drop
+Deploying cpp/mbed.h to drop
+Deploying cpp/platform.h to drop
+Deploying cpp/PortIn.h to drop
+Deploying cpp/PortInOut.h to drop
+Deploying cpp/PortOut.h to drop
+Deploying cpp/PwmOut.h to drop
+Deploying cpp/Serial.h to drop
+Deploying cpp/SPI.h to drop
+Deploying cpp/SPISlave.h to drop
+Deploying cpp/Stream.h to drop
+Deploying cpp/Ticker.h to drop
+Deploying cpp/Timeout.h to drop
+Deploying cpp/TimerEvent.h to drop
+Deploying cpp/Timer.h to drop
+Deploying capi/analogin_api.h to drop
+Deploying capi/analogout_api.h to drop
+Deploying capi/can_api.h to drop
+Deploying capi/can_helper.h to drop
+Deploying capi/error.h to drop
+Deploying capi/ethernet_api.h to drop
+Deploying capi/gpio_api.h to drop
+Deploying capi/gpio_irq_api.h to drop
+Deploying capi/i2c_api.h to drop
+Deploying capi/mbed_debug.h to drop
+Deploying capi/mbed_interface.h to drop
+Deploying capi/pinmap.h to drop
+Deploying capi/port_api.h to drop
+Deploying capi/pwmout_api.h to drop
+Deploying capi/rtc_api.h to drop
+Deploying capi/rtc_time.h to drop
+Deploying capi/semihost_api.h to drop
+Deploying capi/serial_api.h to drop
+Deploying capi/sleep_api.h to drop
+Deploying capi/spi_api.h to drop
+Deploying capi/toolchain.h to drop
+Deploying capi/us_ticker_api.h to drop
+Deploying capi/wait_api.h to drop
+Building mbed-lpc1768.mk
+make[3]: se entra en el directorio '/mnt/disk/src/desktop_src/CNC/Smoothieware/mbed/src'
+Compiling vendor/NXP/capi/analogin_api.c
+vendor/NXP/capi/analogin_api.c: In function 'analogin_init':
+vendor/NXP/capi/analogin_api.c:75:18: warning: comparison is always false due to limited range of data type [-Wtype-limits]
+   75 |     if (obj->adc == (uint32_t)NC) {
+      |                  ^~
+Compiling vendor/NXP/capi/analogout_api.c
+vendor/NXP/capi/analogout_api.c: In function 'analogout_init':
+vendor/NXP/capi/analogout_api.c:31:18: warning: comparison is always false due to limited range of data type [-Wtype-limits]
+   31 |     if (obj->dac == (uint32_t)NC) {
+      |                  ^~
+Compiling vendor/NXP/capi/board.c
+Compiling vendor/NXP/capi/can_api.c
+Compiling vendor/NXP/capi/ethernet_api.c
+vendor/NXP/capi/ethernet_api.c: In function 'ethernet_write':
+vendor/NXP/capi/ethernet_api.c:573:16: warning: cast discards 'const' qualifier from pointer target type [-Wcast-qual]
+  573 |         psrc = (void *)(data + soff);
+      |                ^
+vendor/NXP/capi/ethernet_api.c: In function 'ethernet_receive':
+vendor/NXP/capi/ethernet_api.c:681:77: warning: comparison of integer expressions of different signedness: 'int' and 'uint32_t' {aka 'long unsigned int'} [-Wsign-compare]
+  681 |         while(!(rxstat[receive_idx].Info & RINFO_LAST_FLAG) && (receive_idx != LPC_EMAC->RxProduceIndex)) {
+      |                                                                             ^~
+vendor/NXP/capi/ethernet_api.c:697:20: warning: comparison of integer expressions of different signedness: 'int' and 'uint32_t' {aka 'long unsigned int'} [-Wsign-compare]
+  697 |     if(receive_idx == LPC_EMAC->RxProduceIndex) {
+      |                    ^~
+vendor/NXP/capi/ethernet_api.c: In function 'ethernet_read':
+vendor/NXP/capi/ethernet_api.c:746:20: warning: comparison of integer expressions of different signedness: 'int' and 'uint32_t' {aka 'long unsigned int'} [-Wsign-compare]
+  746 |     if(receive_idx == LPC_EMAC->RxProduceIndex || receive_idx == -1) {
+      |                    ^~
+Compiling vendor/NXP/capi/gpio_api.c
+Compiling vendor/NXP/capi/gpio_irq_api.c
+Compiling vendor/NXP/capi/i2c_api.c
+Compiling vendor/NXP/capi/pinmap.c
+vendor/NXP/capi/pinmap.c: In function 'pin_function':
+vendor/NXP/capi/pinmap.c:31:13: warning: comparison of integer expressions of different signedness: 'PinName' and 'long unsigned int' [-Wsign-compare]
+   31 |     if (pin == (uint32_t)NC) return;
+      |             ^~
+vendor/NXP/capi/pinmap.c: In function 'pin_mode':
+vendor/NXP/capi/pinmap.c:54:13: warning: comparison of integer expressions of different signedness: 'PinName' and 'long unsigned int' [-Wsign-compare]
+   54 |     if (pin == (uint32_t)NC) { return; }
+      |             ^~
+Compiling vendor/NXP/capi/PinNames.c
+Compiling vendor/NXP/capi/port_api.c
+Compiling vendor/NXP/capi/pwmout_api.c
+vendor/NXP/capi/pwmout_api.c: In function 'pwmout_init':
+vendor/NXP/capi/pwmout_api.c:113:13: warning: comparison is always false due to limited range of data type [-Wtype-limits]
+  113 |     if (pwm == (uint32_t)NC)
+      |             ^~
+Compiling vendor/NXP/capi/rtc_api.c
+Compiling vendor/NXP/capi/semihost.c
+Compiling vendor/NXP/capi/serial_api.c
+Compiling vendor/NXP/capi/sleep.c
+Compiling vendor/NXP/capi/spi_api.c
+Compiling vendor/NXP/capi/us_ticker_api.c
+Compiling vendor/NXP/cmsis/LPC1768/cmsis_nvic.c
+Compiling vendor/NXP/cmsis/LPC1768/core_cm3.c
+Compiling vendor/NXP/cmsis/LPC1768/system_LPC17xx.c
+Compiling capi/exit.c
+Compiling capi/mbed_interface.c
+capi/mbed_interface.c:41:10: warning: redundant redeclaration of 'mbed_interface_uid' [-Wredundant-decls]
+   41 | WEAK int mbed_interface_uid(char *uid);
+      |          ^~~~~~~~~~~~~~~~~~
+In file included from capi/mbed_interface.c:17:
+capi/mbed_interface.h:79:5: note: previous declaration of 'mbed_interface_uid' with type 'int(char *)'
+   79 | int mbed_interface_uid(char *uid);
+      |     ^~~~~~~~~~~~~~~~~~
+capi/mbed_interface.c:78:11: warning: redundant redeclaration of 'mbed_mac_address' [-Wredundant-decls]
+   78 | WEAK void mbed_mac_address(char *mac);
+      |           ^~~~~~~~~~~~~~~~
+capi/mbed_interface.h:91:6: note: previous declaration of 'mbed_mac_address' with type 'void(char *)'
+   91 | void mbed_mac_address(char *mac);
+      |      ^~~~~~~~~~~~~~~~
+Compiling capi/pinmap_common.c
+capi/pinmap_common.c: In function 'pinmap_peripheral':
+capi/pinmap_common.c:47:13: warning: comparison of integer expressions of different signedness: 'PinName' and 'long unsigned int' [-Wsign-compare]
+   47 |     if (pin == (uint32_t)NC)
+      |             ^~
+Compiling capi/rtc_time.c
+Compiling capi/semihost_api.c
+Compiling capi/wait_api.c
+capi/wait_api.c: In function 'wait_us':
+capi/wait_api.c:29:39: warning: comparison of integer expressions of different signedness: 'uint32_t' {aka 'long unsigned int'} and 'int' [-Wsign-compare]
+   29 |     while ((us_ticker_read() - start) < us);
+      |                                       ^
+Assembling vendor/NXP/cmsis/LPC1768/GCC_ARM/startup_LPC17xx.s
+Compiling cpp/BusIn.cpp
+In file included from ./vendor/NXP/cmsis/LPC1768/core_cm3.h:122,
+                 from ./vendor/NXP/cmsis/LPC1768/LPC17xx.h:99,
+                 from ./vendor/NXP/cmsis/LPC1768/cmsis.h:10,
+                 from ./vendor/NXP/capi/LPC1768/objects.h:19,
+                 from ./vendor/NXP/capi/LPC1768/device.h:55,
+                 from cpp/platform.h:21,
+                 from cpp/BusIn.h:19,
+                 from cpp/BusIn.cpp:16:
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h: In function 'uint32_t __get_PSP()':
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h:412:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  412 |   register uint32_t result;
+      |                     ^~~~~~
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h: In function 'uint32_t __get_MSP()':
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h:439:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  439 |   register uint32_t result;
+      |                     ^~~~~~
+Compiling cpp/BusInOut.cpp
+In file included from ./vendor/NXP/cmsis/LPC1768/core_cm3.h:122,
+                 from ./vendor/NXP/cmsis/LPC1768/LPC17xx.h:99,
+                 from ./vendor/NXP/cmsis/LPC1768/cmsis.h:10,
+                 from ./vendor/NXP/capi/LPC1768/objects.h:19,
+                 from ./vendor/NXP/capi/LPC1768/device.h:55,
+                 from cpp/platform.h:21,
+                 from cpp/DigitalInOut.h:19,
+                 from cpp/BusInOut.h:19,
+                 from cpp/BusInOut.cpp:16:
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h: In function 'uint32_t __get_PSP()':
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h:412:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  412 |   register uint32_t result;
+      |                     ^~~~~~
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h: In function 'uint32_t __get_MSP()':
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h:439:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  439 |   register uint32_t result;
+      |                     ^~~~~~
+Compiling cpp/BusOut.cpp
+In file included from ./vendor/NXP/cmsis/LPC1768/core_cm3.h:122,
+                 from ./vendor/NXP/cmsis/LPC1768/LPC17xx.h:99,
+                 from ./vendor/NXP/cmsis/LPC1768/cmsis.h:10,
+                 from ./vendor/NXP/capi/LPC1768/objects.h:19,
+                 from ./vendor/NXP/capi/LPC1768/device.h:55,
+                 from cpp/platform.h:21,
+                 from cpp/DigitalOut.h:19,
+                 from cpp/BusOut.h:19,
+                 from cpp/BusOut.cpp:16:
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h: In function 'uint32_t __get_PSP()':
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h:412:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  412 |   register uint32_t result;
+      |                     ^~~~~~
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h: In function 'uint32_t __get_MSP()':
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h:439:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  439 |   register uint32_t result;
+      |                     ^~~~~~
+Compiling cpp/CAN.cpp
+In file included from ./vendor/NXP/cmsis/LPC1768/core_cm3.h:122,
+                 from ./vendor/NXP/cmsis/LPC1768/LPC17xx.h:99,
+                 from ./vendor/NXP/cmsis/LPC1768/cmsis.h:10,
+                 from ./vendor/NXP/capi/LPC1768/objects.h:19,
+                 from ./vendor/NXP/capi/LPC1768/device.h:55,
+                 from cpp/platform.h:21,
+                 from cpp/CAN.h:19,
+                 from cpp/CAN.cpp:16:
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h: In function 'uint32_t __get_PSP()':
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h:412:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  412 |   register uint32_t result;
+      |                     ^~~~~~
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h: In function 'uint32_t __get_MSP()':
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h:439:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  439 |   register uint32_t result;
+      |                     ^~~~~~
+Compiling cpp/Ethernet.cpp
+In file included from ./vendor/NXP/cmsis/LPC1768/core_cm3.h:122,
+                 from ./vendor/NXP/cmsis/LPC1768/LPC17xx.h:99,
+                 from ./vendor/NXP/cmsis/LPC1768/cmsis.h:10,
+                 from ./vendor/NXP/capi/LPC1768/objects.h:19,
+                 from ./vendor/NXP/capi/LPC1768/device.h:55,
+                 from cpp/platform.h:21,
+                 from cpp/Ethernet.h:19,
+                 from cpp/Ethernet.cpp:16:
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h: In function 'uint32_t __get_PSP()':
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h:412:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  412 |   register uint32_t result;
+      |                     ^~~~~~
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h: In function 'uint32_t __get_MSP()':
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h:439:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  439 |   register uint32_t result;
+      |                     ^~~~~~
+Compiling cpp/FileBase.cpp
+In file included from ./vendor/NXP/cmsis/LPC1768/core_cm3.h:122,
+                 from ./vendor/NXP/cmsis/LPC1768/LPC17xx.h:99,
+                 from ./vendor/NXP/cmsis/LPC1768/cmsis.h:10,
+                 from ./vendor/NXP/capi/LPC1768/objects.h:19,
+                 from ./vendor/NXP/capi/LPC1768/device.h:55,
+                 from cpp/platform.h:21,
+                 from cpp/FileBase.h:43,
+                 from cpp/FileBase.cpp:16:
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h: In function 'uint32_t __get_PSP()':
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h:412:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  412 |   register uint32_t result;
+      |                     ^~~~~~
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h: In function 'uint32_t __get_MSP()':
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h:439:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  439 |   register uint32_t result;
+      |                     ^~~~~~
+Compiling cpp/FileLike.cpp
+In file included from ./vendor/NXP/cmsis/LPC1768/core_cm3.h:122,
+                 from ./vendor/NXP/cmsis/LPC1768/LPC17xx.h:99,
+                 from ./vendor/NXP/cmsis/LPC1768/cmsis.h:10,
+                 from ./vendor/NXP/capi/LPC1768/objects.h:19,
+                 from ./vendor/NXP/capi/LPC1768/device.h:55,
+                 from cpp/platform.h:21,
+                 from cpp/FileBase.h:43,
+                 from cpp/FileLike.h:19,
+                 from cpp/FileLike.cpp:16:
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h: In function 'uint32_t __get_PSP()':
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h:412:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  412 |   register uint32_t result;
+      |                     ^~~~~~
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h: In function 'uint32_t __get_MSP()':
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h:439:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  439 |   register uint32_t result;
+      |                     ^~~~~~
+Compiling cpp/FilePath.cpp
+In file included from ./vendor/NXP/cmsis/LPC1768/core_cm3.h:122,
+                 from ./vendor/NXP/cmsis/LPC1768/LPC17xx.h:99,
+                 from ./vendor/NXP/cmsis/LPC1768/cmsis.h:10,
+                 from ./vendor/NXP/capi/LPC1768/objects.h:19,
+                 from ./vendor/NXP/capi/LPC1768/device.h:55,
+                 from cpp/platform.h:21,
+                 from cpp/FilePath.h:19,
+                 from cpp/FilePath.cpp:16:
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h: In function 'uint32_t __get_PSP()':
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h:412:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  412 |   register uint32_t result;
+      |                     ^~~~~~
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h: In function 'uint32_t __get_MSP()':
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h:439:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  439 |   register uint32_t result;
+      |                     ^~~~~~
+Compiling cpp/FileSystemLike.cpp
+In file included from ./vendor/NXP/cmsis/LPC1768/core_cm3.h:122,
+                 from ./vendor/NXP/cmsis/LPC1768/LPC17xx.h:99,
+                 from ./vendor/NXP/cmsis/LPC1768/cmsis.h:10,
+                 from ./vendor/NXP/capi/LPC1768/objects.h:19,
+                 from ./vendor/NXP/capi/LPC1768/device.h:55,
+                 from cpp/platform.h:21,
+                 from cpp/FileSystemLike.h:19,
+                 from cpp/FileSystemLike.cpp:16:
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h: In function 'uint32_t __get_PSP()':
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h:412:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  412 |   register uint32_t result;
+      |                     ^~~~~~
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h: In function 'uint32_t __get_MSP()':
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h:439:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  439 |   register uint32_t result;
+      |                     ^~~~~~
+Compiling cpp/FunctionPointer.cpp
+Compiling cpp/I2C.cpp
+In file included from ./vendor/NXP/cmsis/LPC1768/core_cm3.h:122,
+                 from ./vendor/NXP/cmsis/LPC1768/LPC17xx.h:99,
+                 from ./vendor/NXP/cmsis/LPC1768/cmsis.h:10,
+                 from ./vendor/NXP/capi/LPC1768/objects.h:19,
+                 from ./vendor/NXP/capi/LPC1768/device.h:55,
+                 from cpp/platform.h:21,
+                 from cpp/I2C.h:19,
+                 from cpp/I2C.cpp:16:
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h: In function 'uint32_t __get_PSP()':
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h:412:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  412 |   register uint32_t result;
+      |                     ^~~~~~
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h: In function 'uint32_t __get_MSP()':
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h:439:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  439 |   register uint32_t result;
+      |                     ^~~~~~
+Compiling cpp/I2CSlave.cpp
+In file included from ./vendor/NXP/cmsis/LPC1768/core_cm3.h:122,
+                 from ./vendor/NXP/cmsis/LPC1768/LPC17xx.h:99,
+                 from ./vendor/NXP/cmsis/LPC1768/cmsis.h:10,
+                 from ./vendor/NXP/capi/LPC1768/objects.h:19,
+                 from ./vendor/NXP/capi/LPC1768/device.h:55,
+                 from cpp/platform.h:21,
+                 from cpp/I2CSlave.h:19,
+                 from cpp/I2CSlave.cpp:16:
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h: In function 'uint32_t __get_PSP()':
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h:412:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  412 |   register uint32_t result;
+      |                     ^~~~~~
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h: In function 'uint32_t __get_MSP()':
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h:439:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  439 |   register uint32_t result;
+      |                     ^~~~~~
+Compiling cpp/InterruptIn.cpp
+In file included from ./vendor/NXP/cmsis/LPC1768/core_cm3.h:122,
+                 from ./vendor/NXP/cmsis/LPC1768/LPC17xx.h:99,
+                 from ./vendor/NXP/cmsis/LPC1768/cmsis.h:10,
+                 from ./vendor/NXP/capi/LPC1768/objects.h:19,
+                 from ./vendor/NXP/capi/LPC1768/device.h:55,
+                 from cpp/platform.h:21,
+                 from cpp/InterruptIn.h:19,
+                 from cpp/InterruptIn.cpp:16:
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h: In function 'uint32_t __get_PSP()':
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h:412:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  412 |   register uint32_t result;
+      |                     ^~~~~~
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h: In function 'uint32_t __get_MSP()':
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h:439:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  439 |   register uint32_t result;
+      |                     ^~~~~~
+Compiling cpp/LocalFileSystem.cpp
+In file included from ./vendor/NXP/cmsis/LPC1768/core_cm3.h:122,
+                 from ./vendor/NXP/cmsis/LPC1768/LPC17xx.h:99,
+                 from ./vendor/NXP/cmsis/LPC1768/cmsis.h:10,
+                 from ./vendor/NXP/capi/LPC1768/objects.h:19,
+                 from ./vendor/NXP/capi/LPC1768/device.h:55,
+                 from cpp/platform.h:21,
+                 from cpp/LocalFileSystem.h:19,
+                 from cpp/LocalFileSystem.cpp:16:
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h: In function 'uint32_t __get_PSP()':
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h:412:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  412 |   register uint32_t result;
+      |                     ^~~~~~
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h: In function 'uint32_t __get_MSP()':
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h:439:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  439 |   register uint32_t result;
+      |                     ^~~~~~
+Compiling cpp/Serial.cpp
+In file included from ./vendor/NXP/cmsis/LPC1768/core_cm3.h:122,
+                 from ./vendor/NXP/cmsis/LPC1768/LPC17xx.h:99,
+                 from ./vendor/NXP/cmsis/LPC1768/cmsis.h:10,
+                 from ./vendor/NXP/capi/LPC1768/objects.h:19,
+                 from ./vendor/NXP/capi/LPC1768/device.h:55,
+                 from cpp/platform.h:21,
+                 from cpp/Serial.h:19,
+                 from cpp/Serial.cpp:16:
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h: In function 'uint32_t __get_PSP()':
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h:412:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  412 |   register uint32_t result;
+      |                     ^~~~~~
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h: In function 'uint32_t __get_MSP()':
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h:439:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  439 |   register uint32_t result;
+      |                     ^~~~~~
+Compiling cpp/SPI.cpp
+In file included from ./vendor/NXP/cmsis/LPC1768/core_cm3.h:122,
+                 from ./vendor/NXP/cmsis/LPC1768/LPC17xx.h:99,
+                 from ./vendor/NXP/cmsis/LPC1768/cmsis.h:10,
+                 from ./vendor/NXP/capi/LPC1768/objects.h:19,
+                 from ./vendor/NXP/capi/LPC1768/device.h:55,
+                 from cpp/platform.h:21,
+                 from cpp/SPI.h:19,
+                 from cpp/SPI.cpp:16:
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h: In function 'uint32_t __get_PSP()':
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h:412:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  412 |   register uint32_t result;
+      |                     ^~~~~~
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h: In function 'uint32_t __get_MSP()':
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h:439:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  439 |   register uint32_t result;
+      |                     ^~~~~~
+Compiling cpp/SPISlave.cpp
+In file included from ./vendor/NXP/cmsis/LPC1768/core_cm3.h:122,
+                 from ./vendor/NXP/cmsis/LPC1768/LPC17xx.h:99,
+                 from ./vendor/NXP/cmsis/LPC1768/cmsis.h:10,
+                 from ./vendor/NXP/capi/LPC1768/objects.h:19,
+                 from ./vendor/NXP/capi/LPC1768/device.h:55,
+                 from cpp/platform.h:21,
+                 from cpp/SPISlave.h:19,
+                 from cpp/SPISlave.cpp:16:
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h: In function 'uint32_t __get_PSP()':
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h:412:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  412 |   register uint32_t result;
+      |                     ^~~~~~
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h: In function 'uint32_t __get_MSP()':
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h:439:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  439 |   register uint32_t result;
+      |                     ^~~~~~
+Compiling cpp/stdio.cpp
+In file included from ./vendor/NXP/cmsis/LPC1768/core_cm3.h:122,
+                 from ./vendor/NXP/cmsis/LPC1768/LPC17xx.h:99,
+                 from ./vendor/NXP/cmsis/LPC1768/cmsis.h:10,
+                 from ./vendor/NXP/capi/LPC1768/objects.h:19,
+                 from ./vendor/NXP/capi/LPC1768/device.h:55,
+                 from cpp/platform.h:21,
+                 from cpp/stdio.cpp:16:
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h: In function 'uint32_t __get_PSP()':
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h:412:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  412 |   register uint32_t result;
+      |                     ^~~~~~
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h: In function 'uint32_t __get_MSP()':
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h:439:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  439 |   register uint32_t result;
+      |                     ^~~~~~
+Compiling cpp/Stream.cpp
+In file included from ./vendor/NXP/cmsis/LPC1768/core_cm3.h:122,
+                 from ./vendor/NXP/cmsis/LPC1768/LPC17xx.h:99,
+                 from ./vendor/NXP/cmsis/LPC1768/cmsis.h:10,
+                 from ./vendor/NXP/capi/LPC1768/objects.h:19,
+                 from ./vendor/NXP/capi/LPC1768/device.h:55,
+                 from cpp/platform.h:21,
+                 from cpp/Stream.h:19,
+                 from cpp/Stream.cpp:16:
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h: In function 'uint32_t __get_PSP()':
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h:412:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  412 |   register uint32_t result;
+      |                     ^~~~~~
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h: In function 'uint32_t __get_MSP()':
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h:439:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  439 |   register uint32_t result;
+      |                     ^~~~~~
+Compiling cpp/Ticker.cpp
+Compiling cpp/Timeout.cpp
+Compiling cpp/Timer.cpp
+In file included from ./vendor/NXP/cmsis/LPC1768/core_cm3.h:122,
+                 from ./vendor/NXP/cmsis/LPC1768/LPC17xx.h:99,
+                 from ./vendor/NXP/cmsis/LPC1768/cmsis.h:10,
+                 from ./vendor/NXP/capi/LPC1768/objects.h:19,
+                 from ./vendor/NXP/capi/LPC1768/device.h:55,
+                 from cpp/platform.h:21,
+                 from cpp/Timer.h:19,
+                 from cpp/Timer.cpp:16:
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h: In function 'uint32_t __get_PSP()':
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h:412:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  412 |   register uint32_t result;
+      |                     ^~~~~~
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h: In function 'uint32_t __get_MSP()':
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h:439:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  439 |   register uint32_t result;
+      |                     ^~~~~~
+Compiling cpp/TimerEvent.cpp
+In file included from ./vendor/NXP/cmsis/LPC1768/core_cm3.h:122,
+                 from ./vendor/NXP/cmsis/LPC1768/LPC17xx.h:99,
+                 from ./vendor/NXP/cmsis/LPC1768/cmsis.h:10,
+                 from cpp/TimerEvent.cpp:17:
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h: In function 'uint32_t __get_PSP()':
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h:412:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  412 |   register uint32_t result;
+      |                     ^~~~~~
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h: In function 'uint32_t __get_MSP()':
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h:439:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  439 |   register uint32_t result;
+      |                     ^~~~~~
+Linking release library ../drop/LPC1768/GCC_ARM/libmbed.a
+Compiling vendor/NXP/capi/analogin_api.c
+vendor/NXP/capi/analogin_api.c: In function 'analogin_init':
+vendor/NXP/capi/analogin_api.c:75:18: warning: comparison is always false due to limited range of data type [-Wtype-limits]
+   75 |     if (obj->adc == (uint32_t)NC) {
+      |                  ^~
+Compiling vendor/NXP/capi/analogout_api.c
+vendor/NXP/capi/analogout_api.c: In function 'analogout_init':
+vendor/NXP/capi/analogout_api.c:31:18: warning: comparison is always false due to limited range of data type [-Wtype-limits]
+   31 |     if (obj->dac == (uint32_t)NC) {
+      |                  ^~
+Compiling vendor/NXP/capi/board.c
+Compiling vendor/NXP/capi/can_api.c
+Compiling vendor/NXP/capi/ethernet_api.c
+vendor/NXP/capi/ethernet_api.c: In function 'ethernet_write':
+vendor/NXP/capi/ethernet_api.c:573:16: warning: cast discards 'const' qualifier from pointer target type [-Wcast-qual]
+  573 |         psrc = (void *)(data + soff);
+      |                ^
+vendor/NXP/capi/ethernet_api.c: In function 'ethernet_receive':
+vendor/NXP/capi/ethernet_api.c:681:77: warning: comparison of integer expressions of different signedness: 'int' and 'uint32_t' {aka 'long unsigned int'} [-Wsign-compare]
+  681 |         while(!(rxstat[receive_idx].Info & RINFO_LAST_FLAG) && (receive_idx != LPC_EMAC->RxProduceIndex)) {
+      |                                                                             ^~
+vendor/NXP/capi/ethernet_api.c:697:20: warning: comparison of integer expressions of different signedness: 'int' and 'uint32_t' {aka 'long unsigned int'} [-Wsign-compare]
+  697 |     if(receive_idx == LPC_EMAC->RxProduceIndex) {
+      |                    ^~
+vendor/NXP/capi/ethernet_api.c: In function 'ethernet_read':
+vendor/NXP/capi/ethernet_api.c:746:20: warning: comparison of integer expressions of different signedness: 'int' and 'uint32_t' {aka 'long unsigned int'} [-Wsign-compare]
+  746 |     if(receive_idx == LPC_EMAC->RxProduceIndex || receive_idx == -1) {
+      |                    ^~
+Compiling vendor/NXP/capi/gpio_api.c
+Compiling vendor/NXP/capi/gpio_irq_api.c
+Compiling vendor/NXP/capi/i2c_api.c
+Compiling vendor/NXP/capi/pinmap.c
+vendor/NXP/capi/pinmap.c: In function 'pin_function':
+vendor/NXP/capi/pinmap.c:31:13: warning: comparison of integer expressions of different signedness: 'PinName' and 'long unsigned int' [-Wsign-compare]
+   31 |     if (pin == (uint32_t)NC) return;
+      |             ^~
+vendor/NXP/capi/pinmap.c: In function 'pin_mode':
+vendor/NXP/capi/pinmap.c:54:13: warning: comparison of integer expressions of different signedness: 'PinName' and 'long unsigned int' [-Wsign-compare]
+   54 |     if (pin == (uint32_t)NC) { return; }
+      |             ^~
+Compiling vendor/NXP/capi/PinNames.c
+Compiling vendor/NXP/capi/port_api.c
+Compiling vendor/NXP/capi/pwmout_api.c
+vendor/NXP/capi/pwmout_api.c: In function 'pwmout_init':
+vendor/NXP/capi/pwmout_api.c:113:13: warning: comparison is always false due to limited range of data type [-Wtype-limits]
+  113 |     if (pwm == (uint32_t)NC)
+      |             ^~
+Compiling vendor/NXP/capi/rtc_api.c
+Compiling vendor/NXP/capi/semihost.c
+Compiling vendor/NXP/capi/serial_api.c
+Compiling vendor/NXP/capi/sleep.c
+Compiling vendor/NXP/capi/spi_api.c
+Compiling vendor/NXP/capi/us_ticker_api.c
+Compiling vendor/NXP/cmsis/LPC1768/cmsis_nvic.c
+Compiling vendor/NXP/cmsis/LPC1768/core_cm3.c
+Compiling vendor/NXP/cmsis/LPC1768/system_LPC17xx.c
+Compiling capi/exit.c
+Compiling capi/mbed_interface.c
+capi/mbed_interface.c:41:10: warning: redundant redeclaration of 'mbed_interface_uid' [-Wredundant-decls]
+   41 | WEAK int mbed_interface_uid(char *uid);
+      |          ^~~~~~~~~~~~~~~~~~
+In file included from capi/mbed_interface.c:17:
+capi/mbed_interface.h:79:5: note: previous declaration of 'mbed_interface_uid' with type 'int(char *)'
+   79 | int mbed_interface_uid(char *uid);
+      |     ^~~~~~~~~~~~~~~~~~
+capi/mbed_interface.c:78:11: warning: redundant redeclaration of 'mbed_mac_address' [-Wredundant-decls]
+   78 | WEAK void mbed_mac_address(char *mac);
+      |           ^~~~~~~~~~~~~~~~
+capi/mbed_interface.h:91:6: note: previous declaration of 'mbed_mac_address' with type 'void(char *)'
+   91 | void mbed_mac_address(char *mac);
+      |      ^~~~~~~~~~~~~~~~
+Compiling capi/pinmap_common.c
+capi/pinmap_common.c: In function 'pinmap_peripheral':
+capi/pinmap_common.c:47:13: warning: comparison of integer expressions of different signedness: 'PinName' and 'long unsigned int' [-Wsign-compare]
+   47 |     if (pin == (uint32_t)NC)
+      |             ^~
+Compiling capi/rtc_time.c
+Compiling capi/semihost_api.c
+capi/semihost_api.c: In function 'semihost_exit':
+capi/semihost_api.c:115:12: warning: 'args' may be used uninitialized [-Wmaybe-uninitialized]
+  115 |     return __semihost(SYS_EXIT, args);
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from capi/semihost_api.c:17:
+capi/semihost_api.h:46:12: note: by argument 2 of type 'const void *' to '__semihost' declared here
+   46 | inline int __semihost(int reason, const void *arg) {
+      |            ^~~~~~~~~~
+capi/semihost_api.c:114:14: note: 'args' declared here
+  114 |     uint32_t args[4];
+      |              ^~~~
+Compiling capi/wait_api.c
+capi/wait_api.c: In function 'wait_us':
+capi/wait_api.c:29:39: warning: comparison of integer expressions of different signedness: 'uint32_t' {aka 'long unsigned int'} and 'int' [-Wsign-compare]
+   29 |     while ((us_ticker_read() - start) < us);
+      |                                       ^
+Assembling vendor/NXP/cmsis/LPC1768/GCC_ARM/startup_LPC17xx.s
+Compiling cpp/BusIn.cpp
+In file included from ./vendor/NXP/cmsis/LPC1768/core_cm3.h:122,
+                 from ./vendor/NXP/cmsis/LPC1768/LPC17xx.h:99,
+                 from ./vendor/NXP/cmsis/LPC1768/cmsis.h:10,
+                 from ./vendor/NXP/capi/LPC1768/objects.h:19,
+                 from ./vendor/NXP/capi/LPC1768/device.h:55,
+                 from cpp/platform.h:21,
+                 from cpp/BusIn.h:19,
+                 from cpp/BusIn.cpp:16:
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h: In function 'uint32_t __get_PSP()':
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h:412:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  412 |   register uint32_t result;
+      |                     ^~~~~~
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h: In function 'uint32_t __get_MSP()':
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h:439:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  439 |   register uint32_t result;
+      |                     ^~~~~~
+Compiling cpp/BusInOut.cpp
+In file included from ./vendor/NXP/cmsis/LPC1768/core_cm3.h:122,
+                 from ./vendor/NXP/cmsis/LPC1768/LPC17xx.h:99,
+                 from ./vendor/NXP/cmsis/LPC1768/cmsis.h:10,
+                 from ./vendor/NXP/capi/LPC1768/objects.h:19,
+                 from ./vendor/NXP/capi/LPC1768/device.h:55,
+                 from cpp/platform.h:21,
+                 from cpp/DigitalInOut.h:19,
+                 from cpp/BusInOut.h:19,
+                 from cpp/BusInOut.cpp:16:
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h: In function 'uint32_t __get_PSP()':
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h:412:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  412 |   register uint32_t result;
+      |                     ^~~~~~
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h: In function 'uint32_t __get_MSP()':
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h:439:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  439 |   register uint32_t result;
+      |                     ^~~~~~
+Compiling cpp/BusOut.cpp
+In file included from ./vendor/NXP/cmsis/LPC1768/core_cm3.h:122,
+                 from ./vendor/NXP/cmsis/LPC1768/LPC17xx.h:99,
+                 from ./vendor/NXP/cmsis/LPC1768/cmsis.h:10,
+                 from ./vendor/NXP/capi/LPC1768/objects.h:19,
+                 from ./vendor/NXP/capi/LPC1768/device.h:55,
+                 from cpp/platform.h:21,
+                 from cpp/DigitalOut.h:19,
+                 from cpp/BusOut.h:19,
+                 from cpp/BusOut.cpp:16:
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h: In function 'uint32_t __get_PSP()':
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h:412:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  412 |   register uint32_t result;
+      |                     ^~~~~~
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h: In function 'uint32_t __get_MSP()':
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h:439:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  439 |   register uint32_t result;
+      |                     ^~~~~~
+Compiling cpp/CAN.cpp
+In file included from ./vendor/NXP/cmsis/LPC1768/core_cm3.h:122,
+                 from ./vendor/NXP/cmsis/LPC1768/LPC17xx.h:99,
+                 from ./vendor/NXP/cmsis/LPC1768/cmsis.h:10,
+                 from ./vendor/NXP/capi/LPC1768/objects.h:19,
+                 from ./vendor/NXP/capi/LPC1768/device.h:55,
+                 from cpp/platform.h:21,
+                 from cpp/CAN.h:19,
+                 from cpp/CAN.cpp:16:
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h: In function 'uint32_t __get_PSP()':
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h:412:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  412 |   register uint32_t result;
+      |                     ^~~~~~
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h: In function 'uint32_t __get_MSP()':
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h:439:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  439 |   register uint32_t result;
+      |                     ^~~~~~
+Compiling cpp/Ethernet.cpp
+In file included from ./vendor/NXP/cmsis/LPC1768/core_cm3.h:122,
+                 from ./vendor/NXP/cmsis/LPC1768/LPC17xx.h:99,
+                 from ./vendor/NXP/cmsis/LPC1768/cmsis.h:10,
+                 from ./vendor/NXP/capi/LPC1768/objects.h:19,
+                 from ./vendor/NXP/capi/LPC1768/device.h:55,
+                 from cpp/platform.h:21,
+                 from cpp/Ethernet.h:19,
+                 from cpp/Ethernet.cpp:16:
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h: In function 'uint32_t __get_PSP()':
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h:412:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  412 |   register uint32_t result;
+      |                     ^~~~~~
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h: In function 'uint32_t __get_MSP()':
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h:439:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  439 |   register uint32_t result;
+      |                     ^~~~~~
+Compiling cpp/FileBase.cpp
+In file included from ./vendor/NXP/cmsis/LPC1768/core_cm3.h:122,
+                 from ./vendor/NXP/cmsis/LPC1768/LPC17xx.h:99,
+                 from ./vendor/NXP/cmsis/LPC1768/cmsis.h:10,
+                 from ./vendor/NXP/capi/LPC1768/objects.h:19,
+                 from ./vendor/NXP/capi/LPC1768/device.h:55,
+                 from cpp/platform.h:21,
+                 from cpp/FileBase.h:43,
+                 from cpp/FileBase.cpp:16:
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h: In function 'uint32_t __get_PSP()':
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h:412:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  412 |   register uint32_t result;
+      |                     ^~~~~~
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h: In function 'uint32_t __get_MSP()':
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h:439:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  439 |   register uint32_t result;
+      |                     ^~~~~~
+Compiling cpp/FileLike.cpp
+In file included from ./vendor/NXP/cmsis/LPC1768/core_cm3.h:122,
+                 from ./vendor/NXP/cmsis/LPC1768/LPC17xx.h:99,
+                 from ./vendor/NXP/cmsis/LPC1768/cmsis.h:10,
+                 from ./vendor/NXP/capi/LPC1768/objects.h:19,
+                 from ./vendor/NXP/capi/LPC1768/device.h:55,
+                 from cpp/platform.h:21,
+                 from cpp/FileBase.h:43,
+                 from cpp/FileLike.h:19,
+                 from cpp/FileLike.cpp:16:
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h: In function 'uint32_t __get_PSP()':
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h:412:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  412 |   register uint32_t result;
+      |                     ^~~~~~
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h: In function 'uint32_t __get_MSP()':
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h:439:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  439 |   register uint32_t result;
+      |                     ^~~~~~
+Compiling cpp/FilePath.cpp
+In file included from ./vendor/NXP/cmsis/LPC1768/core_cm3.h:122,
+                 from ./vendor/NXP/cmsis/LPC1768/LPC17xx.h:99,
+                 from ./vendor/NXP/cmsis/LPC1768/cmsis.h:10,
+                 from ./vendor/NXP/capi/LPC1768/objects.h:19,
+                 from ./vendor/NXP/capi/LPC1768/device.h:55,
+                 from cpp/platform.h:21,
+                 from cpp/FilePath.h:19,
+                 from cpp/FilePath.cpp:16:
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h: In function 'uint32_t __get_PSP()':
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h:412:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  412 |   register uint32_t result;
+      |                     ^~~~~~
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h: In function 'uint32_t __get_MSP()':
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h:439:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  439 |   register uint32_t result;
+      |                     ^~~~~~
+Compiling cpp/FileSystemLike.cpp
+In file included from ./vendor/NXP/cmsis/LPC1768/core_cm3.h:122,
+                 from ./vendor/NXP/cmsis/LPC1768/LPC17xx.h:99,
+                 from ./vendor/NXP/cmsis/LPC1768/cmsis.h:10,
+                 from ./vendor/NXP/capi/LPC1768/objects.h:19,
+                 from ./vendor/NXP/capi/LPC1768/device.h:55,
+                 from cpp/platform.h:21,
+                 from cpp/FileSystemLike.h:19,
+                 from cpp/FileSystemLike.cpp:16:
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h: In function 'uint32_t __get_PSP()':
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h:412:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  412 |   register uint32_t result;
+      |                     ^~~~~~
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h: In function 'uint32_t __get_MSP()':
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h:439:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  439 |   register uint32_t result;
+      |                     ^~~~~~
+Compiling cpp/FunctionPointer.cpp
+Compiling cpp/I2C.cpp
+In file included from ./vendor/NXP/cmsis/LPC1768/core_cm3.h:122,
+                 from ./vendor/NXP/cmsis/LPC1768/LPC17xx.h:99,
+                 from ./vendor/NXP/cmsis/LPC1768/cmsis.h:10,
+                 from ./vendor/NXP/capi/LPC1768/objects.h:19,
+                 from ./vendor/NXP/capi/LPC1768/device.h:55,
+                 from cpp/platform.h:21,
+                 from cpp/I2C.h:19,
+                 from cpp/I2C.cpp:16:
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h: In function 'uint32_t __get_PSP()':
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h:412:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  412 |   register uint32_t result;
+      |                     ^~~~~~
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h: In function 'uint32_t __get_MSP()':
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h:439:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  439 |   register uint32_t result;
+      |                     ^~~~~~
+Compiling cpp/I2CSlave.cpp
+In file included from ./vendor/NXP/cmsis/LPC1768/core_cm3.h:122,
+                 from ./vendor/NXP/cmsis/LPC1768/LPC17xx.h:99,
+                 from ./vendor/NXP/cmsis/LPC1768/cmsis.h:10,
+                 from ./vendor/NXP/capi/LPC1768/objects.h:19,
+                 from ./vendor/NXP/capi/LPC1768/device.h:55,
+                 from cpp/platform.h:21,
+                 from cpp/I2CSlave.h:19,
+                 from cpp/I2CSlave.cpp:16:
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h: In function 'uint32_t __get_PSP()':
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h:412:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  412 |   register uint32_t result;
+      |                     ^~~~~~
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h: In function 'uint32_t __get_MSP()':
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h:439:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  439 |   register uint32_t result;
+      |                     ^~~~~~
+Compiling cpp/InterruptIn.cpp
+In file included from ./vendor/NXP/cmsis/LPC1768/core_cm3.h:122,
+                 from ./vendor/NXP/cmsis/LPC1768/LPC17xx.h:99,
+                 from ./vendor/NXP/cmsis/LPC1768/cmsis.h:10,
+                 from ./vendor/NXP/capi/LPC1768/objects.h:19,
+                 from ./vendor/NXP/capi/LPC1768/device.h:55,
+                 from cpp/platform.h:21,
+                 from cpp/InterruptIn.h:19,
+                 from cpp/InterruptIn.cpp:16:
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h: In function 'uint32_t __get_PSP()':
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h:412:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  412 |   register uint32_t result;
+      |                     ^~~~~~
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h: In function 'uint32_t __get_MSP()':
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h:439:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  439 |   register uint32_t result;
+      |                     ^~~~~~
+Compiling cpp/LocalFileSystem.cpp
+In file included from ./vendor/NXP/cmsis/LPC1768/core_cm3.h:122,
+                 from ./vendor/NXP/cmsis/LPC1768/LPC17xx.h:99,
+                 from ./vendor/NXP/cmsis/LPC1768/cmsis.h:10,
+                 from ./vendor/NXP/capi/LPC1768/objects.h:19,
+                 from ./vendor/NXP/capi/LPC1768/device.h:55,
+                 from cpp/platform.h:21,
+                 from cpp/LocalFileSystem.h:19,
+                 from cpp/LocalFileSystem.cpp:16:
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h: In function 'uint32_t __get_PSP()':
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h:412:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  412 |   register uint32_t result;
+      |                     ^~~~~~
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h: In function 'uint32_t __get_MSP()':
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h:439:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  439 |   register uint32_t result;
+      |                     ^~~~~~
+Compiling cpp/Serial.cpp
+In file included from ./vendor/NXP/cmsis/LPC1768/core_cm3.h:122,
+                 from ./vendor/NXP/cmsis/LPC1768/LPC17xx.h:99,
+                 from ./vendor/NXP/cmsis/LPC1768/cmsis.h:10,
+                 from ./vendor/NXP/capi/LPC1768/objects.h:19,
+                 from ./vendor/NXP/capi/LPC1768/device.h:55,
+                 from cpp/platform.h:21,
+                 from cpp/Serial.h:19,
+                 from cpp/Serial.cpp:16:
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h: In function 'uint32_t __get_PSP()':
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h:412:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  412 |   register uint32_t result;
+      |                     ^~~~~~
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h: In function 'uint32_t __get_MSP()':
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h:439:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  439 |   register uint32_t result;
+      |                     ^~~~~~
+Compiling cpp/SPI.cpp
+In file included from ./vendor/NXP/cmsis/LPC1768/core_cm3.h:122,
+                 from ./vendor/NXP/cmsis/LPC1768/LPC17xx.h:99,
+                 from ./vendor/NXP/cmsis/LPC1768/cmsis.h:10,
+                 from ./vendor/NXP/capi/LPC1768/objects.h:19,
+                 from ./vendor/NXP/capi/LPC1768/device.h:55,
+                 from cpp/platform.h:21,
+                 from cpp/SPI.h:19,
+                 from cpp/SPI.cpp:16:
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h: In function 'uint32_t __get_PSP()':
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h:412:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  412 |   register uint32_t result;
+      |                     ^~~~~~
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h: In function 'uint32_t __get_MSP()':
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h:439:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  439 |   register uint32_t result;
+      |                     ^~~~~~
+Compiling cpp/SPISlave.cpp
+In file included from ./vendor/NXP/cmsis/LPC1768/core_cm3.h:122,
+                 from ./vendor/NXP/cmsis/LPC1768/LPC17xx.h:99,
+                 from ./vendor/NXP/cmsis/LPC1768/cmsis.h:10,
+                 from ./vendor/NXP/capi/LPC1768/objects.h:19,
+                 from ./vendor/NXP/capi/LPC1768/device.h:55,
+                 from cpp/platform.h:21,
+                 from cpp/SPISlave.h:19,
+                 from cpp/SPISlave.cpp:16:
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h: In function 'uint32_t __get_PSP()':
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h:412:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  412 |   register uint32_t result;
+      |                     ^~~~~~
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h: In function 'uint32_t __get_MSP()':
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h:439:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  439 |   register uint32_t result;
+      |                     ^~~~~~
+Compiling cpp/stdio.cpp
+In file included from ./vendor/NXP/cmsis/LPC1768/core_cm3.h:122,
+                 from ./vendor/NXP/cmsis/LPC1768/LPC17xx.h:99,
+                 from ./vendor/NXP/cmsis/LPC1768/cmsis.h:10,
+                 from ./vendor/NXP/capi/LPC1768/objects.h:19,
+                 from ./vendor/NXP/capi/LPC1768/device.h:55,
+                 from cpp/platform.h:21,
+                 from cpp/stdio.cpp:16:
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h: In function 'uint32_t __get_PSP()':
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h:412:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  412 |   register uint32_t result;
+      |                     ^~~~~~
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h: In function 'uint32_t __get_MSP()':
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h:439:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  439 |   register uint32_t result;
+      |                     ^~~~~~
+Compiling cpp/Stream.cpp
+In file included from ./vendor/NXP/cmsis/LPC1768/core_cm3.h:122,
+                 from ./vendor/NXP/cmsis/LPC1768/LPC17xx.h:99,
+                 from ./vendor/NXP/cmsis/LPC1768/cmsis.h:10,
+                 from ./vendor/NXP/capi/LPC1768/objects.h:19,
+                 from ./vendor/NXP/capi/LPC1768/device.h:55,
+                 from cpp/platform.h:21,
+                 from cpp/Stream.h:19,
+                 from cpp/Stream.cpp:16:
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h: In function 'uint32_t __get_PSP()':
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h:412:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  412 |   register uint32_t result;
+      |                     ^~~~~~
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h: In function 'uint32_t __get_MSP()':
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h:439:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  439 |   register uint32_t result;
+      |                     ^~~~~~
+Compiling cpp/Ticker.cpp
+Compiling cpp/Timeout.cpp
+Compiling cpp/Timer.cpp
+In file included from ./vendor/NXP/cmsis/LPC1768/core_cm3.h:122,
+                 from ./vendor/NXP/cmsis/LPC1768/LPC17xx.h:99,
+                 from ./vendor/NXP/cmsis/LPC1768/cmsis.h:10,
+                 from ./vendor/NXP/capi/LPC1768/objects.h:19,
+                 from ./vendor/NXP/capi/LPC1768/device.h:55,
+                 from cpp/platform.h:21,
+                 from cpp/Timer.h:19,
+                 from cpp/Timer.cpp:16:
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h: In function 'uint32_t __get_PSP()':
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h:412:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  412 |   register uint32_t result;
+      |                     ^~~~~~
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h: In function 'uint32_t __get_MSP()':
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h:439:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  439 |   register uint32_t result;
+      |                     ^~~~~~
+Compiling cpp/TimerEvent.cpp
+In file included from ./vendor/NXP/cmsis/LPC1768/core_cm3.h:122,
+                 from ./vendor/NXP/cmsis/LPC1768/LPC17xx.h:99,
+                 from ./vendor/NXP/cmsis/LPC1768/cmsis.h:10,
+                 from cpp/TimerEvent.cpp:17:
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h: In function 'uint32_t __get_PSP()':
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h:412:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  412 |   register uint32_t result;
+      |                     ^~~~~~
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h: In function 'uint32_t __get_MSP()':
+./vendor/NXP/cmsis/LPC1768/core_cmFunc.h:439:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  439 |   register uint32_t result;
+      |                     ^~~~~~
+Linking debug library ../drop/LPC1768/GCC_ARM/Debug/libmbed.a
+Deploying vendor/NXP/capi/LPC1768/device.h to drop
+Deploying vendor/NXP/capi/LPC1768/gpio_object.h to drop
+Deploying vendor/NXP/capi/LPC1768/objects.h to drop
+Deploying vendor/NXP/capi/LPC1768/PeripheralNames.h to drop
+Deploying vendor/NXP/capi/LPC1768/PinNames.h to drop
+Deploying vendor/NXP/capi/LPC1768/PortNames.h to drop
+Deploying vendor/NXP/cmsis/LPC1768/cmsis.h to drop
+Deploying vendor/NXP/cmsis/LPC1768/cmsis_nvic.h to drop
+Deploying vendor/NXP/cmsis/LPC1768/core_cm3.h to drop
+Deploying vendor/NXP/cmsis/LPC1768/core_cmFunc.h to drop
+Deploying vendor/NXP/cmsis/LPC1768/core_cmInstr.h to drop
+Deploying vendor/NXP/cmsis/LPC1768/LPC17xx.h to drop
+Deploying vendor/NXP/cmsis/LPC1768/system_LPC17xx.h to drop
+Exporting linker script to ../drop/LPC1768/GCC_ARM/LPC1768.ld
+make[3]: se sale del directorio '/mnt/disk/src/desktop_src/CNC/Smoothieware/mbed/src'
+Building mbed-lpc11u24.mk
+make[3]: se entra en el directorio '/mnt/disk/src/desktop_src/CNC/Smoothieware/mbed/src'
+Compiling vendor/NXP/capi/analogin_api.c
+vendor/NXP/capi/analogin_api.c: In function 'analogin_init':
+vendor/NXP/capi/analogin_api.c:75:18: warning: comparison is always false due to limited range of data type [-Wtype-limits]
+   75 |     if (obj->adc == (uint32_t)NC) {
+      |                  ^~
+Compiling vendor/NXP/capi/analogout_api.c
+Compiling vendor/NXP/capi/board.c
+Compiling vendor/NXP/capi/can_api.c
+Compiling vendor/NXP/capi/ethernet_api.c
+Compiling vendor/NXP/capi/gpio_api.c
+Compiling vendor/NXP/capi/gpio_irq_api.c
+Compiling vendor/NXP/capi/i2c_api.c
+Compiling vendor/NXP/capi/pinmap.c
+vendor/NXP/capi/pinmap.c: In function 'pin_function':
+vendor/NXP/capi/pinmap.c:31:13: warning: comparison of integer expressions of different signedness: 'PinName' and 'long unsigned int' [-Wsign-compare]
+   31 |     if (pin == (uint32_t)NC) return;
+      |             ^~
+vendor/NXP/capi/pinmap.c: In function 'pin_mode':
+vendor/NXP/capi/pinmap.c:54:13: warning: comparison of integer expressions of different signedness: 'PinName' and 'long unsigned int' [-Wsign-compare]
+   54 |     if (pin == (uint32_t)NC) { return; }
+      |             ^~
+Compiling vendor/NXP/capi/PinNames.c
+Compiling vendor/NXP/capi/port_api.c
+Compiling vendor/NXP/capi/pwmout_api.c
+vendor/NXP/capi/pwmout_api.c: In function 'pwmout_init':
+vendor/NXP/capi/pwmout_api.c:113:13: warning: comparison is always false due to limited range of data type [-Wtype-limits]
+  113 |     if (pwm == (uint32_t)NC)
+      |             ^~
+Compiling vendor/NXP/capi/rtc_api.c
+Compiling vendor/NXP/capi/semihost.c
+Compiling vendor/NXP/capi/serial_api.c
+Compiling vendor/NXP/capi/sleep.c
+Compiling vendor/NXP/capi/spi_api.c
+Compiling vendor/NXP/capi/us_ticker_api.c
+Compiling vendor/NXP/cmsis/LPC11U24/cmsis_nvic.c
+Compiling vendor/NXP/cmsis/LPC11U24/core_cm0.c
+Compiling vendor/NXP/cmsis/LPC11U24/system_LPC11Uxx.c
+Compiling capi/exit.c
+Compiling capi/mbed_interface.c
+capi/mbed_interface.c:41:10: warning: redundant redeclaration of 'mbed_interface_uid' [-Wredundant-decls]
+   41 | WEAK int mbed_interface_uid(char *uid);
+      |          ^~~~~~~~~~~~~~~~~~
+In file included from capi/mbed_interface.c:17:
+capi/mbed_interface.h:79:5: note: previous declaration of 'mbed_interface_uid' with type 'int(char *)'
+   79 | int mbed_interface_uid(char *uid);
+      |     ^~~~~~~~~~~~~~~~~~
+capi/mbed_interface.c:78:11: warning: redundant redeclaration of 'mbed_mac_address' [-Wredundant-decls]
+   78 | WEAK void mbed_mac_address(char *mac);
+      |           ^~~~~~~~~~~~~~~~
+capi/mbed_interface.h:91:6: note: previous declaration of 'mbed_mac_address' with type 'void(char *)'
+   91 | void mbed_mac_address(char *mac);
+      |      ^~~~~~~~~~~~~~~~
+Compiling capi/pinmap_common.c
+capi/pinmap_common.c: In function 'pinmap_peripheral':
+capi/pinmap_common.c:47:13: warning: comparison of integer expressions of different signedness: 'PinName' and 'long unsigned int' [-Wsign-compare]
+   47 |     if (pin == (uint32_t)NC)
+      |             ^~
+Compiling capi/rtc_time.c
+Compiling capi/semihost_api.c
+Compiling capi/wait_api.c
+capi/wait_api.c: In function 'wait_us':
+capi/wait_api.c:29:39: warning: comparison of integer expressions of different signedness: 'uint32_t' {aka 'long unsigned int'} and 'int' [-Wsign-compare]
+   29 |     while ((us_ticker_read() - start) < us);
+      |                                       ^
+Assembling vendor/NXP/cmsis/LPC11U24/GCC_ARM/startup_LPC11xx.s
+Compiling cpp/BusIn.cpp
+In file included from ./vendor/NXP/cmsis/LPC11U24/core_cm0.h:113,
+                 from ./vendor/NXP/cmsis/LPC11U24/LPC11Uxx.h:101,
+                 from ./vendor/NXP/cmsis/LPC11U24/cmsis.h:10,
+                 from ./vendor/NXP/capi/LPC11U24/objects.h:19,
+                 from ./vendor/NXP/capi/LPC11U24/device.h:55,
+                 from cpp/platform.h:21,
+                 from cpp/BusIn.h:19,
+                 from cpp/BusIn.cpp:16:
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h: In function 'uint32_t __get_PSP()':
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h:412:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  412 |   register uint32_t result;
+      |                     ^~~~~~
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h: In function 'uint32_t __get_MSP()':
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h:439:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  439 |   register uint32_t result;
+      |                     ^~~~~~
+Compiling cpp/BusInOut.cpp
+In file included from ./vendor/NXP/cmsis/LPC11U24/core_cm0.h:113,
+                 from ./vendor/NXP/cmsis/LPC11U24/LPC11Uxx.h:101,
+                 from ./vendor/NXP/cmsis/LPC11U24/cmsis.h:10,
+                 from ./vendor/NXP/capi/LPC11U24/objects.h:19,
+                 from ./vendor/NXP/capi/LPC11U24/device.h:55,
+                 from cpp/platform.h:21,
+                 from cpp/DigitalInOut.h:19,
+                 from cpp/BusInOut.h:19,
+                 from cpp/BusInOut.cpp:16:
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h: In function 'uint32_t __get_PSP()':
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h:412:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  412 |   register uint32_t result;
+      |                     ^~~~~~
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h: In function 'uint32_t __get_MSP()':
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h:439:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  439 |   register uint32_t result;
+      |                     ^~~~~~
+Compiling cpp/BusOut.cpp
+In file included from ./vendor/NXP/cmsis/LPC11U24/core_cm0.h:113,
+                 from ./vendor/NXP/cmsis/LPC11U24/LPC11Uxx.h:101,
+                 from ./vendor/NXP/cmsis/LPC11U24/cmsis.h:10,
+                 from ./vendor/NXP/capi/LPC11U24/objects.h:19,
+                 from ./vendor/NXP/capi/LPC11U24/device.h:55,
+                 from cpp/platform.h:21,
+                 from cpp/DigitalOut.h:19,
+                 from cpp/BusOut.h:19,
+                 from cpp/BusOut.cpp:16:
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h: In function 'uint32_t __get_PSP()':
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h:412:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  412 |   register uint32_t result;
+      |                     ^~~~~~
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h: In function 'uint32_t __get_MSP()':
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h:439:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  439 |   register uint32_t result;
+      |                     ^~~~~~
+Compiling cpp/CAN.cpp
+In file included from ./vendor/NXP/cmsis/LPC11U24/core_cm0.h:113,
+                 from ./vendor/NXP/cmsis/LPC11U24/LPC11Uxx.h:101,
+                 from ./vendor/NXP/cmsis/LPC11U24/cmsis.h:10,
+                 from ./vendor/NXP/capi/LPC11U24/objects.h:19,
+                 from ./vendor/NXP/capi/LPC11U24/device.h:55,
+                 from cpp/platform.h:21,
+                 from cpp/CAN.h:19,
+                 from cpp/CAN.cpp:16:
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h: In function 'uint32_t __get_PSP()':
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h:412:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  412 |   register uint32_t result;
+      |                     ^~~~~~
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h: In function 'uint32_t __get_MSP()':
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h:439:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  439 |   register uint32_t result;
+      |                     ^~~~~~
+Compiling cpp/Ethernet.cpp
+In file included from ./vendor/NXP/cmsis/LPC11U24/core_cm0.h:113,
+                 from ./vendor/NXP/cmsis/LPC11U24/LPC11Uxx.h:101,
+                 from ./vendor/NXP/cmsis/LPC11U24/cmsis.h:10,
+                 from ./vendor/NXP/capi/LPC11U24/objects.h:19,
+                 from ./vendor/NXP/capi/LPC11U24/device.h:55,
+                 from cpp/platform.h:21,
+                 from cpp/Ethernet.h:19,
+                 from cpp/Ethernet.cpp:16:
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h: In function 'uint32_t __get_PSP()':
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h:412:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  412 |   register uint32_t result;
+      |                     ^~~~~~
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h: In function 'uint32_t __get_MSP()':
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h:439:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  439 |   register uint32_t result;
+      |                     ^~~~~~
+Compiling cpp/FileBase.cpp
+In file included from ./vendor/NXP/cmsis/LPC11U24/core_cm0.h:113,
+                 from ./vendor/NXP/cmsis/LPC11U24/LPC11Uxx.h:101,
+                 from ./vendor/NXP/cmsis/LPC11U24/cmsis.h:10,
+                 from ./vendor/NXP/capi/LPC11U24/objects.h:19,
+                 from ./vendor/NXP/capi/LPC11U24/device.h:55,
+                 from cpp/platform.h:21,
+                 from cpp/FileBase.h:43,
+                 from cpp/FileBase.cpp:16:
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h: In function 'uint32_t __get_PSP()':
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h:412:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  412 |   register uint32_t result;
+      |                     ^~~~~~
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h: In function 'uint32_t __get_MSP()':
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h:439:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  439 |   register uint32_t result;
+      |                     ^~~~~~
+Compiling cpp/FileLike.cpp
+In file included from ./vendor/NXP/cmsis/LPC11U24/core_cm0.h:113,
+                 from ./vendor/NXP/cmsis/LPC11U24/LPC11Uxx.h:101,
+                 from ./vendor/NXP/cmsis/LPC11U24/cmsis.h:10,
+                 from ./vendor/NXP/capi/LPC11U24/objects.h:19,
+                 from ./vendor/NXP/capi/LPC11U24/device.h:55,
+                 from cpp/platform.h:21,
+                 from cpp/FileBase.h:43,
+                 from cpp/FileLike.h:19,
+                 from cpp/FileLike.cpp:16:
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h: In function 'uint32_t __get_PSP()':
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h:412:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  412 |   register uint32_t result;
+      |                     ^~~~~~
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h: In function 'uint32_t __get_MSP()':
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h:439:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  439 |   register uint32_t result;
+      |                     ^~~~~~
+Compiling cpp/FilePath.cpp
+In file included from ./vendor/NXP/cmsis/LPC11U24/core_cm0.h:113,
+                 from ./vendor/NXP/cmsis/LPC11U24/LPC11Uxx.h:101,
+                 from ./vendor/NXP/cmsis/LPC11U24/cmsis.h:10,
+                 from ./vendor/NXP/capi/LPC11U24/objects.h:19,
+                 from ./vendor/NXP/capi/LPC11U24/device.h:55,
+                 from cpp/platform.h:21,
+                 from cpp/FilePath.h:19,
+                 from cpp/FilePath.cpp:16:
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h: In function 'uint32_t __get_PSP()':
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h:412:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  412 |   register uint32_t result;
+      |                     ^~~~~~
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h: In function 'uint32_t __get_MSP()':
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h:439:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  439 |   register uint32_t result;
+      |                     ^~~~~~
+Compiling cpp/FileSystemLike.cpp
+In file included from ./vendor/NXP/cmsis/LPC11U24/core_cm0.h:113,
+                 from ./vendor/NXP/cmsis/LPC11U24/LPC11Uxx.h:101,
+                 from ./vendor/NXP/cmsis/LPC11U24/cmsis.h:10,
+                 from ./vendor/NXP/capi/LPC11U24/objects.h:19,
+                 from ./vendor/NXP/capi/LPC11U24/device.h:55,
+                 from cpp/platform.h:21,
+                 from cpp/FileSystemLike.h:19,
+                 from cpp/FileSystemLike.cpp:16:
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h: In function 'uint32_t __get_PSP()':
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h:412:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  412 |   register uint32_t result;
+      |                     ^~~~~~
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h: In function 'uint32_t __get_MSP()':
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h:439:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  439 |   register uint32_t result;
+      |                     ^~~~~~
+Compiling cpp/FunctionPointer.cpp
+Compiling cpp/I2C.cpp
+In file included from ./vendor/NXP/cmsis/LPC11U24/core_cm0.h:113,
+                 from ./vendor/NXP/cmsis/LPC11U24/LPC11Uxx.h:101,
+                 from ./vendor/NXP/cmsis/LPC11U24/cmsis.h:10,
+                 from ./vendor/NXP/capi/LPC11U24/objects.h:19,
+                 from ./vendor/NXP/capi/LPC11U24/device.h:55,
+                 from cpp/platform.h:21,
+                 from cpp/I2C.h:19,
+                 from cpp/I2C.cpp:16:
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h: In function 'uint32_t __get_PSP()':
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h:412:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  412 |   register uint32_t result;
+      |                     ^~~~~~
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h: In function 'uint32_t __get_MSP()':
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h:439:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  439 |   register uint32_t result;
+      |                     ^~~~~~
+Compiling cpp/I2CSlave.cpp
+In file included from ./vendor/NXP/cmsis/LPC11U24/core_cm0.h:113,
+                 from ./vendor/NXP/cmsis/LPC11U24/LPC11Uxx.h:101,
+                 from ./vendor/NXP/cmsis/LPC11U24/cmsis.h:10,
+                 from ./vendor/NXP/capi/LPC11U24/objects.h:19,
+                 from ./vendor/NXP/capi/LPC11U24/device.h:55,
+                 from cpp/platform.h:21,
+                 from cpp/I2CSlave.h:19,
+                 from cpp/I2CSlave.cpp:16:
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h: In function 'uint32_t __get_PSP()':
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h:412:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  412 |   register uint32_t result;
+      |                     ^~~~~~
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h: In function 'uint32_t __get_MSP()':
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h:439:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  439 |   register uint32_t result;
+      |                     ^~~~~~
+Compiling cpp/InterruptIn.cpp
+In file included from ./vendor/NXP/cmsis/LPC11U24/core_cm0.h:113,
+                 from ./vendor/NXP/cmsis/LPC11U24/LPC11Uxx.h:101,
+                 from ./vendor/NXP/cmsis/LPC11U24/cmsis.h:10,
+                 from ./vendor/NXP/capi/LPC11U24/objects.h:19,
+                 from ./vendor/NXP/capi/LPC11U24/device.h:55,
+                 from cpp/platform.h:21,
+                 from cpp/InterruptIn.h:19,
+                 from cpp/InterruptIn.cpp:16:
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h: In function 'uint32_t __get_PSP()':
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h:412:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  412 |   register uint32_t result;
+      |                     ^~~~~~
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h: In function 'uint32_t __get_MSP()':
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h:439:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  439 |   register uint32_t result;
+      |                     ^~~~~~
+Compiling cpp/LocalFileSystem.cpp
+In file included from ./vendor/NXP/cmsis/LPC11U24/core_cm0.h:113,
+                 from ./vendor/NXP/cmsis/LPC11U24/LPC11Uxx.h:101,
+                 from ./vendor/NXP/cmsis/LPC11U24/cmsis.h:10,
+                 from ./vendor/NXP/capi/LPC11U24/objects.h:19,
+                 from ./vendor/NXP/capi/LPC11U24/device.h:55,
+                 from cpp/platform.h:21,
+                 from cpp/LocalFileSystem.h:19,
+                 from cpp/LocalFileSystem.cpp:16:
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h: In function 'uint32_t __get_PSP()':
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h:412:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  412 |   register uint32_t result;
+      |                     ^~~~~~
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h: In function 'uint32_t __get_MSP()':
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h:439:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  439 |   register uint32_t result;
+      |                     ^~~~~~
+Compiling cpp/Serial.cpp
+In file included from ./vendor/NXP/cmsis/LPC11U24/core_cm0.h:113,
+                 from ./vendor/NXP/cmsis/LPC11U24/LPC11Uxx.h:101,
+                 from ./vendor/NXP/cmsis/LPC11U24/cmsis.h:10,
+                 from ./vendor/NXP/capi/LPC11U24/objects.h:19,
+                 from ./vendor/NXP/capi/LPC11U24/device.h:55,
+                 from cpp/platform.h:21,
+                 from cpp/Serial.h:19,
+                 from cpp/Serial.cpp:16:
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h: In function 'uint32_t __get_PSP()':
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h:412:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  412 |   register uint32_t result;
+      |                     ^~~~~~
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h: In function 'uint32_t __get_MSP()':
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h:439:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  439 |   register uint32_t result;
+      |                     ^~~~~~
+Compiling cpp/SPI.cpp
+In file included from ./vendor/NXP/cmsis/LPC11U24/core_cm0.h:113,
+                 from ./vendor/NXP/cmsis/LPC11U24/LPC11Uxx.h:101,
+                 from ./vendor/NXP/cmsis/LPC11U24/cmsis.h:10,
+                 from ./vendor/NXP/capi/LPC11U24/objects.h:19,
+                 from ./vendor/NXP/capi/LPC11U24/device.h:55,
+                 from cpp/platform.h:21,
+                 from cpp/SPI.h:19,
+                 from cpp/SPI.cpp:16:
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h: In function 'uint32_t __get_PSP()':
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h:412:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  412 |   register uint32_t result;
+      |                     ^~~~~~
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h: In function 'uint32_t __get_MSP()':
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h:439:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  439 |   register uint32_t result;
+      |                     ^~~~~~
+Compiling cpp/SPISlave.cpp
+In file included from ./vendor/NXP/cmsis/LPC11U24/core_cm0.h:113,
+                 from ./vendor/NXP/cmsis/LPC11U24/LPC11Uxx.h:101,
+                 from ./vendor/NXP/cmsis/LPC11U24/cmsis.h:10,
+                 from ./vendor/NXP/capi/LPC11U24/objects.h:19,
+                 from ./vendor/NXP/capi/LPC11U24/device.h:55,
+                 from cpp/platform.h:21,
+                 from cpp/SPISlave.h:19,
+                 from cpp/SPISlave.cpp:16:
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h: In function 'uint32_t __get_PSP()':
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h:412:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  412 |   register uint32_t result;
+      |                     ^~~~~~
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h: In function 'uint32_t __get_MSP()':
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h:439:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  439 |   register uint32_t result;
+      |                     ^~~~~~
+Compiling cpp/stdio.cpp
+In file included from ./vendor/NXP/cmsis/LPC11U24/core_cm0.h:113,
+                 from ./vendor/NXP/cmsis/LPC11U24/LPC11Uxx.h:101,
+                 from ./vendor/NXP/cmsis/LPC11U24/cmsis.h:10,
+                 from ./vendor/NXP/capi/LPC11U24/objects.h:19,
+                 from ./vendor/NXP/capi/LPC11U24/device.h:55,
+                 from cpp/platform.h:21,
+                 from cpp/stdio.cpp:16:
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h: In function 'uint32_t __get_PSP()':
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h:412:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  412 |   register uint32_t result;
+      |                     ^~~~~~
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h: In function 'uint32_t __get_MSP()':
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h:439:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  439 |   register uint32_t result;
+      |                     ^~~~~~
+Compiling cpp/Stream.cpp
+In file included from ./vendor/NXP/cmsis/LPC11U24/core_cm0.h:113,
+                 from ./vendor/NXP/cmsis/LPC11U24/LPC11Uxx.h:101,
+                 from ./vendor/NXP/cmsis/LPC11U24/cmsis.h:10,
+                 from ./vendor/NXP/capi/LPC11U24/objects.h:19,
+                 from ./vendor/NXP/capi/LPC11U24/device.h:55,
+                 from cpp/platform.h:21,
+                 from cpp/Stream.h:19,
+                 from cpp/Stream.cpp:16:
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h: In function 'uint32_t __get_PSP()':
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h:412:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  412 |   register uint32_t result;
+      |                     ^~~~~~
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h: In function 'uint32_t __get_MSP()':
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h:439:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  439 |   register uint32_t result;
+      |                     ^~~~~~
+Compiling cpp/Ticker.cpp
+Compiling cpp/Timeout.cpp
+Compiling cpp/Timer.cpp
+In file included from ./vendor/NXP/cmsis/LPC11U24/core_cm0.h:113,
+                 from ./vendor/NXP/cmsis/LPC11U24/LPC11Uxx.h:101,
+                 from ./vendor/NXP/cmsis/LPC11U24/cmsis.h:10,
+                 from ./vendor/NXP/capi/LPC11U24/objects.h:19,
+                 from ./vendor/NXP/capi/LPC11U24/device.h:55,
+                 from cpp/platform.h:21,
+                 from cpp/Timer.h:19,
+                 from cpp/Timer.cpp:16:
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h: In function 'uint32_t __get_PSP()':
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h:412:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  412 |   register uint32_t result;
+      |                     ^~~~~~
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h: In function 'uint32_t __get_MSP()':
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h:439:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  439 |   register uint32_t result;
+      |                     ^~~~~~
+Compiling cpp/TimerEvent.cpp
+In file included from ./vendor/NXP/cmsis/LPC11U24/core_cm0.h:113,
+                 from ./vendor/NXP/cmsis/LPC11U24/LPC11Uxx.h:101,
+                 from ./vendor/NXP/cmsis/LPC11U24/cmsis.h:10,
+                 from cpp/TimerEvent.cpp:17:
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h: In function 'uint32_t __get_PSP()':
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h:412:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  412 |   register uint32_t result;
+      |                     ^~~~~~
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h: In function 'uint32_t __get_MSP()':
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h:439:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  439 |   register uint32_t result;
+      |                     ^~~~~~
+Linking release library ../drop/LPC11U24/GCC_ARM/libmbed.a
+Compiling vendor/NXP/capi/analogin_api.c
+vendor/NXP/capi/analogin_api.c: In function 'analogin_init':
+vendor/NXP/capi/analogin_api.c:75:18: warning: comparison is always false due to limited range of data type [-Wtype-limits]
+   75 |     if (obj->adc == (uint32_t)NC) {
+      |                  ^~
+Compiling vendor/NXP/capi/analogout_api.c
+Compiling vendor/NXP/capi/board.c
+Compiling vendor/NXP/capi/can_api.c
+Compiling vendor/NXP/capi/ethernet_api.c
+Compiling vendor/NXP/capi/gpio_api.c
+Compiling vendor/NXP/capi/gpio_irq_api.c
+Compiling vendor/NXP/capi/i2c_api.c
+Compiling vendor/NXP/capi/pinmap.c
+vendor/NXP/capi/pinmap.c: In function 'pin_function':
+vendor/NXP/capi/pinmap.c:31:13: warning: comparison of integer expressions of different signedness: 'PinName' and 'long unsigned int' [-Wsign-compare]
+   31 |     if (pin == (uint32_t)NC) return;
+      |             ^~
+vendor/NXP/capi/pinmap.c: In function 'pin_mode':
+vendor/NXP/capi/pinmap.c:54:13: warning: comparison of integer expressions of different signedness: 'PinName' and 'long unsigned int' [-Wsign-compare]
+   54 |     if (pin == (uint32_t)NC) { return; }
+      |             ^~
+Compiling vendor/NXP/capi/PinNames.c
+Compiling vendor/NXP/capi/port_api.c
+Compiling vendor/NXP/capi/pwmout_api.c
+vendor/NXP/capi/pwmout_api.c: In function 'pwmout_init':
+vendor/NXP/capi/pwmout_api.c:113:13: warning: comparison is always false due to limited range of data type [-Wtype-limits]
+  113 |     if (pwm == (uint32_t)NC)
+      |             ^~
+Compiling vendor/NXP/capi/rtc_api.c
+Compiling vendor/NXP/capi/semihost.c
+Compiling vendor/NXP/capi/serial_api.c
+Compiling vendor/NXP/capi/sleep.c
+Compiling vendor/NXP/capi/spi_api.c
+Compiling vendor/NXP/capi/us_ticker_api.c
+Compiling vendor/NXP/cmsis/LPC11U24/cmsis_nvic.c
+Compiling vendor/NXP/cmsis/LPC11U24/core_cm0.c
+Compiling vendor/NXP/cmsis/LPC11U24/system_LPC11Uxx.c
+Compiling capi/exit.c
+Compiling capi/mbed_interface.c
+capi/mbed_interface.c:41:10: warning: redundant redeclaration of 'mbed_interface_uid' [-Wredundant-decls]
+   41 | WEAK int mbed_interface_uid(char *uid);
+      |          ^~~~~~~~~~~~~~~~~~
+In file included from capi/mbed_interface.c:17:
+capi/mbed_interface.h:79:5: note: previous declaration of 'mbed_interface_uid' with type 'int(char *)'
+   79 | int mbed_interface_uid(char *uid);
+      |     ^~~~~~~~~~~~~~~~~~
+capi/mbed_interface.c:78:11: warning: redundant redeclaration of 'mbed_mac_address' [-Wredundant-decls]
+   78 | WEAK void mbed_mac_address(char *mac);
+      |           ^~~~~~~~~~~~~~~~
+capi/mbed_interface.h:91:6: note: previous declaration of 'mbed_mac_address' with type 'void(char *)'
+   91 | void mbed_mac_address(char *mac);
+      |      ^~~~~~~~~~~~~~~~
+Compiling capi/pinmap_common.c
+capi/pinmap_common.c: In function 'pinmap_peripheral':
+capi/pinmap_common.c:47:13: warning: comparison of integer expressions of different signedness: 'PinName' and 'long unsigned int' [-Wsign-compare]
+   47 |     if (pin == (uint32_t)NC)
+      |             ^~
+Compiling capi/rtc_time.c
+Compiling capi/semihost_api.c
+capi/semihost_api.c: In function 'semihost_exit':
+capi/semihost_api.c:115:12: warning: 'args' may be used uninitialized [-Wmaybe-uninitialized]
+  115 |     return __semihost(SYS_EXIT, args);
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from capi/semihost_api.c:17:
+capi/semihost_api.h:46:12: note: by argument 2 of type 'const void *' to '__semihost' declared here
+   46 | inline int __semihost(int reason, const void *arg) {
+      |            ^~~~~~~~~~
+capi/semihost_api.c:114:14: note: 'args' declared here
+  114 |     uint32_t args[4];
+      |              ^~~~
+Compiling capi/wait_api.c
+capi/wait_api.c: In function 'wait_us':
+capi/wait_api.c:29:39: warning: comparison of integer expressions of different signedness: 'uint32_t' {aka 'long unsigned int'} and 'int' [-Wsign-compare]
+   29 |     while ((us_ticker_read() - start) < us);
+      |                                       ^
+Assembling vendor/NXP/cmsis/LPC11U24/GCC_ARM/startup_LPC11xx.s
+Compiling cpp/BusIn.cpp
+In file included from ./vendor/NXP/cmsis/LPC11U24/core_cm0.h:113,
+                 from ./vendor/NXP/cmsis/LPC11U24/LPC11Uxx.h:101,
+                 from ./vendor/NXP/cmsis/LPC11U24/cmsis.h:10,
+                 from ./vendor/NXP/capi/LPC11U24/objects.h:19,
+                 from ./vendor/NXP/capi/LPC11U24/device.h:55,
+                 from cpp/platform.h:21,
+                 from cpp/BusIn.h:19,
+                 from cpp/BusIn.cpp:16:
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h: In function 'uint32_t __get_PSP()':
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h:412:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  412 |   register uint32_t result;
+      |                     ^~~~~~
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h: In function 'uint32_t __get_MSP()':
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h:439:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  439 |   register uint32_t result;
+      |                     ^~~~~~
+Compiling cpp/BusInOut.cpp
+In file included from ./vendor/NXP/cmsis/LPC11U24/core_cm0.h:113,
+                 from ./vendor/NXP/cmsis/LPC11U24/LPC11Uxx.h:101,
+                 from ./vendor/NXP/cmsis/LPC11U24/cmsis.h:10,
+                 from ./vendor/NXP/capi/LPC11U24/objects.h:19,
+                 from ./vendor/NXP/capi/LPC11U24/device.h:55,
+                 from cpp/platform.h:21,
+                 from cpp/DigitalInOut.h:19,
+                 from cpp/BusInOut.h:19,
+                 from cpp/BusInOut.cpp:16:
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h: In function 'uint32_t __get_PSP()':
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h:412:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  412 |   register uint32_t result;
+      |                     ^~~~~~
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h: In function 'uint32_t __get_MSP()':
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h:439:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  439 |   register uint32_t result;
+      |                     ^~~~~~
+Compiling cpp/BusOut.cpp
+In file included from ./vendor/NXP/cmsis/LPC11U24/core_cm0.h:113,
+                 from ./vendor/NXP/cmsis/LPC11U24/LPC11Uxx.h:101,
+                 from ./vendor/NXP/cmsis/LPC11U24/cmsis.h:10,
+                 from ./vendor/NXP/capi/LPC11U24/objects.h:19,
+                 from ./vendor/NXP/capi/LPC11U24/device.h:55,
+                 from cpp/platform.h:21,
+                 from cpp/DigitalOut.h:19,
+                 from cpp/BusOut.h:19,
+                 from cpp/BusOut.cpp:16:
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h: In function 'uint32_t __get_PSP()':
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h:412:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  412 |   register uint32_t result;
+      |                     ^~~~~~
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h: In function 'uint32_t __get_MSP()':
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h:439:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  439 |   register uint32_t result;
+      |                     ^~~~~~
+Compiling cpp/CAN.cpp
+In file included from ./vendor/NXP/cmsis/LPC11U24/core_cm0.h:113,
+                 from ./vendor/NXP/cmsis/LPC11U24/LPC11Uxx.h:101,
+                 from ./vendor/NXP/cmsis/LPC11U24/cmsis.h:10,
+                 from ./vendor/NXP/capi/LPC11U24/objects.h:19,
+                 from ./vendor/NXP/capi/LPC11U24/device.h:55,
+                 from cpp/platform.h:21,
+                 from cpp/CAN.h:19,
+                 from cpp/CAN.cpp:16:
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h: In function 'uint32_t __get_PSP()':
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h:412:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  412 |   register uint32_t result;
+      |                     ^~~~~~
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h: In function 'uint32_t __get_MSP()':
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h:439:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  439 |   register uint32_t result;
+      |                     ^~~~~~
+Compiling cpp/Ethernet.cpp
+In file included from ./vendor/NXP/cmsis/LPC11U24/core_cm0.h:113,
+                 from ./vendor/NXP/cmsis/LPC11U24/LPC11Uxx.h:101,
+                 from ./vendor/NXP/cmsis/LPC11U24/cmsis.h:10,
+                 from ./vendor/NXP/capi/LPC11U24/objects.h:19,
+                 from ./vendor/NXP/capi/LPC11U24/device.h:55,
+                 from cpp/platform.h:21,
+                 from cpp/Ethernet.h:19,
+                 from cpp/Ethernet.cpp:16:
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h: In function 'uint32_t __get_PSP()':
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h:412:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  412 |   register uint32_t result;
+      |                     ^~~~~~
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h: In function 'uint32_t __get_MSP()':
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h:439:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  439 |   register uint32_t result;
+      |                     ^~~~~~
+Compiling cpp/FileBase.cpp
+In file included from ./vendor/NXP/cmsis/LPC11U24/core_cm0.h:113,
+                 from ./vendor/NXP/cmsis/LPC11U24/LPC11Uxx.h:101,
+                 from ./vendor/NXP/cmsis/LPC11U24/cmsis.h:10,
+                 from ./vendor/NXP/capi/LPC11U24/objects.h:19,
+                 from ./vendor/NXP/capi/LPC11U24/device.h:55,
+                 from cpp/platform.h:21,
+                 from cpp/FileBase.h:43,
+                 from cpp/FileBase.cpp:16:
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h: In function 'uint32_t __get_PSP()':
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h:412:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  412 |   register uint32_t result;
+      |                     ^~~~~~
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h: In function 'uint32_t __get_MSP()':
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h:439:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  439 |   register uint32_t result;
+      |                     ^~~~~~
+Compiling cpp/FileLike.cpp
+In file included from ./vendor/NXP/cmsis/LPC11U24/core_cm0.h:113,
+                 from ./vendor/NXP/cmsis/LPC11U24/LPC11Uxx.h:101,
+                 from ./vendor/NXP/cmsis/LPC11U24/cmsis.h:10,
+                 from ./vendor/NXP/capi/LPC11U24/objects.h:19,
+                 from ./vendor/NXP/capi/LPC11U24/device.h:55,
+                 from cpp/platform.h:21,
+                 from cpp/FileBase.h:43,
+                 from cpp/FileLike.h:19,
+                 from cpp/FileLike.cpp:16:
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h: In function 'uint32_t __get_PSP()':
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h:412:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  412 |   register uint32_t result;
+      |                     ^~~~~~
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h: In function 'uint32_t __get_MSP()':
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h:439:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  439 |   register uint32_t result;
+      |                     ^~~~~~
+Compiling cpp/FilePath.cpp
+In file included from ./vendor/NXP/cmsis/LPC11U24/core_cm0.h:113,
+                 from ./vendor/NXP/cmsis/LPC11U24/LPC11Uxx.h:101,
+                 from ./vendor/NXP/cmsis/LPC11U24/cmsis.h:10,
+                 from ./vendor/NXP/capi/LPC11U24/objects.h:19,
+                 from ./vendor/NXP/capi/LPC11U24/device.h:55,
+                 from cpp/platform.h:21,
+                 from cpp/FilePath.h:19,
+                 from cpp/FilePath.cpp:16:
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h: In function 'uint32_t __get_PSP()':
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h:412:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  412 |   register uint32_t result;
+      |                     ^~~~~~
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h: In function 'uint32_t __get_MSP()':
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h:439:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  439 |   register uint32_t result;
+      |                     ^~~~~~
+Compiling cpp/FileSystemLike.cpp
+In file included from ./vendor/NXP/cmsis/LPC11U24/core_cm0.h:113,
+                 from ./vendor/NXP/cmsis/LPC11U24/LPC11Uxx.h:101,
+                 from ./vendor/NXP/cmsis/LPC11U24/cmsis.h:10,
+                 from ./vendor/NXP/capi/LPC11U24/objects.h:19,
+                 from ./vendor/NXP/capi/LPC11U24/device.h:55,
+                 from cpp/platform.h:21,
+                 from cpp/FileSystemLike.h:19,
+                 from cpp/FileSystemLike.cpp:16:
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h: In function 'uint32_t __get_PSP()':
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h:412:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  412 |   register uint32_t result;
+      |                     ^~~~~~
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h: In function 'uint32_t __get_MSP()':
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h:439:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  439 |   register uint32_t result;
+      |                     ^~~~~~
+Compiling cpp/FunctionPointer.cpp
+Compiling cpp/I2C.cpp
+In file included from ./vendor/NXP/cmsis/LPC11U24/core_cm0.h:113,
+                 from ./vendor/NXP/cmsis/LPC11U24/LPC11Uxx.h:101,
+                 from ./vendor/NXP/cmsis/LPC11U24/cmsis.h:10,
+                 from ./vendor/NXP/capi/LPC11U24/objects.h:19,
+                 from ./vendor/NXP/capi/LPC11U24/device.h:55,
+                 from cpp/platform.h:21,
+                 from cpp/I2C.h:19,
+                 from cpp/I2C.cpp:16:
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h: In function 'uint32_t __get_PSP()':
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h:412:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  412 |   register uint32_t result;
+      |                     ^~~~~~
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h: In function 'uint32_t __get_MSP()':
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h:439:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  439 |   register uint32_t result;
+      |                     ^~~~~~
+Compiling cpp/I2CSlave.cpp
+In file included from ./vendor/NXP/cmsis/LPC11U24/core_cm0.h:113,
+                 from ./vendor/NXP/cmsis/LPC11U24/LPC11Uxx.h:101,
+                 from ./vendor/NXP/cmsis/LPC11U24/cmsis.h:10,
+                 from ./vendor/NXP/capi/LPC11U24/objects.h:19,
+                 from ./vendor/NXP/capi/LPC11U24/device.h:55,
+                 from cpp/platform.h:21,
+                 from cpp/I2CSlave.h:19,
+                 from cpp/I2CSlave.cpp:16:
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h: In function 'uint32_t __get_PSP()':
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h:412:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  412 |   register uint32_t result;
+      |                     ^~~~~~
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h: In function 'uint32_t __get_MSP()':
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h:439:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  439 |   register uint32_t result;
+      |                     ^~~~~~
+Compiling cpp/InterruptIn.cpp
+In file included from ./vendor/NXP/cmsis/LPC11U24/core_cm0.h:113,
+                 from ./vendor/NXP/cmsis/LPC11U24/LPC11Uxx.h:101,
+                 from ./vendor/NXP/cmsis/LPC11U24/cmsis.h:10,
+                 from ./vendor/NXP/capi/LPC11U24/objects.h:19,
+                 from ./vendor/NXP/capi/LPC11U24/device.h:55,
+                 from cpp/platform.h:21,
+                 from cpp/InterruptIn.h:19,
+                 from cpp/InterruptIn.cpp:16:
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h: In function 'uint32_t __get_PSP()':
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h:412:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  412 |   register uint32_t result;
+      |                     ^~~~~~
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h: In function 'uint32_t __get_MSP()':
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h:439:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  439 |   register uint32_t result;
+      |                     ^~~~~~
+Compiling cpp/LocalFileSystem.cpp
+In file included from ./vendor/NXP/cmsis/LPC11U24/core_cm0.h:113,
+                 from ./vendor/NXP/cmsis/LPC11U24/LPC11Uxx.h:101,
+                 from ./vendor/NXP/cmsis/LPC11U24/cmsis.h:10,
+                 from ./vendor/NXP/capi/LPC11U24/objects.h:19,
+                 from ./vendor/NXP/capi/LPC11U24/device.h:55,
+                 from cpp/platform.h:21,
+                 from cpp/LocalFileSystem.h:19,
+                 from cpp/LocalFileSystem.cpp:16:
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h: In function 'uint32_t __get_PSP()':
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h:412:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  412 |   register uint32_t result;
+      |                     ^~~~~~
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h: In function 'uint32_t __get_MSP()':
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h:439:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  439 |   register uint32_t result;
+      |                     ^~~~~~
+Compiling cpp/Serial.cpp
+In file included from ./vendor/NXP/cmsis/LPC11U24/core_cm0.h:113,
+                 from ./vendor/NXP/cmsis/LPC11U24/LPC11Uxx.h:101,
+                 from ./vendor/NXP/cmsis/LPC11U24/cmsis.h:10,
+                 from ./vendor/NXP/capi/LPC11U24/objects.h:19,
+                 from ./vendor/NXP/capi/LPC11U24/device.h:55,
+                 from cpp/platform.h:21,
+                 from cpp/Serial.h:19,
+                 from cpp/Serial.cpp:16:
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h: In function 'uint32_t __get_PSP()':
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h:412:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  412 |   register uint32_t result;
+      |                     ^~~~~~
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h: In function 'uint32_t __get_MSP()':
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h:439:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  439 |   register uint32_t result;
+      |                     ^~~~~~
+Compiling cpp/SPI.cpp
+In file included from ./vendor/NXP/cmsis/LPC11U24/core_cm0.h:113,
+                 from ./vendor/NXP/cmsis/LPC11U24/LPC11Uxx.h:101,
+                 from ./vendor/NXP/cmsis/LPC11U24/cmsis.h:10,
+                 from ./vendor/NXP/capi/LPC11U24/objects.h:19,
+                 from ./vendor/NXP/capi/LPC11U24/device.h:55,
+                 from cpp/platform.h:21,
+                 from cpp/SPI.h:19,
+                 from cpp/SPI.cpp:16:
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h: In function 'uint32_t __get_PSP()':
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h:412:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  412 |   register uint32_t result;
+      |                     ^~~~~~
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h: In function 'uint32_t __get_MSP()':
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h:439:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  439 |   register uint32_t result;
+      |                     ^~~~~~
+Compiling cpp/SPISlave.cpp
+In file included from ./vendor/NXP/cmsis/LPC11U24/core_cm0.h:113,
+                 from ./vendor/NXP/cmsis/LPC11U24/LPC11Uxx.h:101,
+                 from ./vendor/NXP/cmsis/LPC11U24/cmsis.h:10,
+                 from ./vendor/NXP/capi/LPC11U24/objects.h:19,
+                 from ./vendor/NXP/capi/LPC11U24/device.h:55,
+                 from cpp/platform.h:21,
+                 from cpp/SPISlave.h:19,
+                 from cpp/SPISlave.cpp:16:
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h: In function 'uint32_t __get_PSP()':
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h:412:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  412 |   register uint32_t result;
+      |                     ^~~~~~
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h: In function 'uint32_t __get_MSP()':
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h:439:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  439 |   register uint32_t result;
+      |                     ^~~~~~
+Compiling cpp/stdio.cpp
+In file included from ./vendor/NXP/cmsis/LPC11U24/core_cm0.h:113,
+                 from ./vendor/NXP/cmsis/LPC11U24/LPC11Uxx.h:101,
+                 from ./vendor/NXP/cmsis/LPC11U24/cmsis.h:10,
+                 from ./vendor/NXP/capi/LPC11U24/objects.h:19,
+                 from ./vendor/NXP/capi/LPC11U24/device.h:55,
+                 from cpp/platform.h:21,
+                 from cpp/stdio.cpp:16:
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h: In function 'uint32_t __get_PSP()':
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h:412:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  412 |   register uint32_t result;
+      |                     ^~~~~~
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h: In function 'uint32_t __get_MSP()':
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h:439:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  439 |   register uint32_t result;
+      |                     ^~~~~~
+Compiling cpp/Stream.cpp
+In file included from ./vendor/NXP/cmsis/LPC11U24/core_cm0.h:113,
+                 from ./vendor/NXP/cmsis/LPC11U24/LPC11Uxx.h:101,
+                 from ./vendor/NXP/cmsis/LPC11U24/cmsis.h:10,
+                 from ./vendor/NXP/capi/LPC11U24/objects.h:19,
+                 from ./vendor/NXP/capi/LPC11U24/device.h:55,
+                 from cpp/platform.h:21,
+                 from cpp/Stream.h:19,
+                 from cpp/Stream.cpp:16:
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h: In function 'uint32_t __get_PSP()':
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h:412:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  412 |   register uint32_t result;
+      |                     ^~~~~~
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h: In function 'uint32_t __get_MSP()':
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h:439:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  439 |   register uint32_t result;
+      |                     ^~~~~~
+Compiling cpp/Ticker.cpp
+Compiling cpp/Timeout.cpp
+Compiling cpp/Timer.cpp
+In file included from ./vendor/NXP/cmsis/LPC11U24/core_cm0.h:113,
+                 from ./vendor/NXP/cmsis/LPC11U24/LPC11Uxx.h:101,
+                 from ./vendor/NXP/cmsis/LPC11U24/cmsis.h:10,
+                 from ./vendor/NXP/capi/LPC11U24/objects.h:19,
+                 from ./vendor/NXP/capi/LPC11U24/device.h:55,
+                 from cpp/platform.h:21,
+                 from cpp/Timer.h:19,
+                 from cpp/Timer.cpp:16:
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h: In function 'uint32_t __get_PSP()':
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h:412:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  412 |   register uint32_t result;
+      |                     ^~~~~~
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h: In function 'uint32_t __get_MSP()':
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h:439:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  439 |   register uint32_t result;
+      |                     ^~~~~~
+Compiling cpp/TimerEvent.cpp
+In file included from ./vendor/NXP/cmsis/LPC11U24/core_cm0.h:113,
+                 from ./vendor/NXP/cmsis/LPC11U24/LPC11Uxx.h:101,
+                 from ./vendor/NXP/cmsis/LPC11U24/cmsis.h:10,
+                 from cpp/TimerEvent.cpp:17:
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h: In function 'uint32_t __get_PSP()':
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h:412:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  412 |   register uint32_t result;
+      |                     ^~~~~~
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h: In function 'uint32_t __get_MSP()':
+./vendor/NXP/cmsis/LPC11U24/core_cmFunc.h:439:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  439 |   register uint32_t result;
+      |                     ^~~~~~
+Linking debug library ../drop/LPC11U24/GCC_ARM/Debug/libmbed.a
+Deploying vendor/NXP/capi/LPC11U24/device.h to drop
+Deploying vendor/NXP/capi/LPC11U24/gpio_object.h to drop
+Deploying vendor/NXP/capi/LPC11U24/objects.h to drop
+Deploying vendor/NXP/capi/LPC11U24/PeripheralNames.h to drop
+Deploying vendor/NXP/capi/LPC11U24/PinNames.h to drop
+Deploying vendor/NXP/capi/LPC11U24/PortNames.h to drop
+Deploying vendor/NXP/cmsis/LPC11U24/cmsis.h to drop
+Deploying vendor/NXP/cmsis/LPC11U24/cmsis_nvic.h to drop
+Deploying vendor/NXP/cmsis/LPC11U24/core_cm0.h to drop
+Deploying vendor/NXP/cmsis/LPC11U24/core_cmFunc.h to drop
+Deploying vendor/NXP/cmsis/LPC11U24/core_cmInstr.h to drop
+Deploying vendor/NXP/cmsis/LPC11U24/LPC11Uxx.h to drop
+Deploying vendor/NXP/cmsis/LPC11U24/power_api.h to drop
+Deploying vendor/NXP/cmsis/LPC11U24/system_LPC11Uxx.h to drop
+Exporting linker script to ../drop/LPC11U24/GCC_ARM/LPC11U24.ld
+make[3]: se sale del directorio '/mnt/disk/src/desktop_src/CNC/Smoothieware/mbed/src'
+make[2]: se sale del directorio '/mnt/disk/src/desktop_src/CNC/Smoothieware/mbed/src'
+make[1]: se sale del directorio '/mnt/disk/src/desktop_src/CNC/Smoothieware/mbed'
+Building Smoothie
+make[1]: se entra en el directorio '/mnt/disk/src/desktop_src/CNC/Smoothieware/src'
+**NOTE** Excluding modules tools/drillingcycles tools/spindle
+make[1]: *** No hay ninguna regla para construir el objetivo '../LPC1768/main.elf', necesario para 'debug-store'.  Alto.
+make[1]: se sale del directorio '/mnt/disk/src/desktop_src/CNC/Smoothieware/src'
+make: *** [makefile:9: all] Error 2
